@@ -43,7 +43,7 @@ p { overflow-wrap: break-word; }
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background-image: radial-gradient(circle, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-image: radial-gradient(circle, var(--dot-tint) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 .bg-glow {
@@ -52,7 +52,7 @@ p { overflow-wrap: break-word; }
   height: 900px;
   border-radius: 50%;
   filter: blur(140px);
-  opacity: 0.16;
+  opacity: var(--bg-glow-opacity, 0.16);
 }
 .bg-glow-teal { top: -280px; left: -240px; background: var(--teal-500); }
 .bg-glow-indigo { bottom: -320px; right: -260px; background: var(--indigo-500); }

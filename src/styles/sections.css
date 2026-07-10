@@ -9,7 +9,7 @@
   transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 .nav.is-scrolled {
-  background: rgba(10, 14, 20, 0.72);
+  background: var(--nav-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom-color: var(--border-1);
@@ -89,7 +89,7 @@
   inset: 0;
   z-index: -1;
   padding: 110px var(--space-4) var(--space-6);
-  background: rgba(5, 7, 12, 0.96);
+  background: var(--menu-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   display: flex;
@@ -111,13 +111,14 @@
   font-weight: 600;
 }
 .mobile-menu-links .btn { font-size: 1rem; margin-top: var(--space-2); }
+.mobile-menu-controls { display: flex; align-items: center; gap: var(--space-3); }
 
 @media (max-width: 899px) {
   .nav-links { display: none; }
   .nav-burger { display: flex; }
 }
 @media (max-width: 639px) {
-  .nav-right .lang-pill, .nav-right .nav-cta { display: none; }
+  .nav-right .lang-pill, .nav-right .nav-cta, .nav-right .theme-toggle { display: none; }
 }
 
 /* ================= HERO ================= */
@@ -236,7 +237,7 @@
 .proof-strip {
   position: relative;
   border-block: 1px solid var(--border-1);
-  background: rgba(10, 15, 22, 0.55);
+  background: var(--strip-bg);
   overflow: hidden;
 }
 .proof-specular {
@@ -329,7 +330,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--overlay-6);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .rail-dot.is-active {
@@ -478,7 +479,7 @@ html.no-motion .tour-step-frame { display: block; }
   overflow: hidden;
   border-radius: 10px;
   border: 1px solid var(--border-1);
-  background: #0b1119;
+  background: var(--frame-chrome-bg);
 }
 .bento-media img {
   position: absolute;
@@ -682,7 +683,7 @@ html.no-motion .tour-step-frame { display: block; }
   border: 1px solid var(--border-1);
   border-radius: 99px;
   padding: 8px 14px;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--overlay-1);
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 .db-pill:hover { color: var(--text-1); border-color: var(--border-teal); }
@@ -726,7 +727,7 @@ html.no-motion .tour-step-frame { display: block; }
   border-radius: var(--radius-sm);
   padding: 18px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--overlay-1);
 }
 .price-row span {
   color: var(--text-3);

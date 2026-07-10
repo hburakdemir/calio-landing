@@ -14,6 +14,8 @@ export default {
   'nav.menuOpen': 'Open menu',
   'nav.menuClose': 'Close menu',
   'nav.langLabel': 'Language',
+  'nav.themeToLight': 'Switch to light theme',
+  'nav.themeToDark': 'Switch to dark theme',
 
   // Hero
   'hero.badge':

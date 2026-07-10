@@ -66,12 +66,26 @@ export function initThreeHero() {
   const normX = new Float32Array(COUNT);
   const normY = new Float32Array(COUNT);
 
-  const palette = [
-    [new THREE.Color('#14B8A6'), 0.55],
-    [new THREE.Color('#2DD4BF'), 0.25],
-    [new THREE.Color('#5EEAD4'), 0.15],
-    [new THREE.Color('#6366F1'), 0.05]
-  ];
+  // Dots are additively blended: on the near-black dark bg that reads as a bright
+  // glow, but additive light-on-light-bg always washes toward white regardless of
+  // hue. Light theme swaps to solid colors + normal blending instead of a darker hue.
+  const palettes = {
+    dark: [
+      [new THREE.Color('#14B8A6'), 0.55],
+      [new THREE.Color('#2DD4BF'), 0.25],
+      [new THREE.Color('#5EEAD4'), 0.15],
+      [new THREE.Color('#6366F1'), 0.05]
+    ],
+    light: [
+      [new THREE.Color('#0F766E'), 0.55],
+      [new THREE.Color('#0D9488'), 0.25],
+      [new THREE.Color('#115E59'), 0.15],
+      [new THREE.Color('#4338CA'), 0.05]
+    ]
+  };
+
+  const isLightTheme = () => document.documentElement.getAttribute('data-theme') === 'light';
+  let palette = palettes[isLightTheme() ? 'light' : 'dark'];
 
   const pickColor = () => {
     let r = Math.random();
@@ -146,7 +160,7 @@ export function initThreeHero() {
     transparent: true,
     opacity: 0.9,
     depthWrite: false,
-    blending: THREE.AdditiveBlending,
+    blending: isLightTheme() ? THREE.NormalBlending : THREE.AdditiveBlending,
     sizeAttenuation: true
   });
 
@@ -266,6 +280,23 @@ export function initThreeHero() {
   };
   window.addEventListener('resize', onResize, { passive: true });
 
+  // Re-tint + swap blending live when the site theme toggles (see palettes above).
+  const colorAttr = geo.getAttribute('color');
+  const onThemeChange = (e) => {
+    const light = e.detail === 'light';
+    palette = palettes[light ? 'light' : 'dark'];
+    mat.blending = light ? THREE.NormalBlending : THREE.AdditiveBlending;
+    mat.needsUpdate = true;
+    for (let i = 0; i < COUNT; i++) {
+      const col = pickColor();
+      colors[i * 3] = col.r;
+      colors[i * 3 + 1] = col.g;
+      colors[i * 3 + 2] = col.b;
+    }
+    colorAttr.needsUpdate = true;
+  };
+  document.addEventListener('calio:themechange', onThemeChange);
+
   const dispose = () => {
     if (disposed) return;
     disposed = true;
@@ -273,6 +304,7 @@ export function initThreeHero() {
     io.disconnect();
     document.removeEventListener('visibilitychange', onVis);
     document.removeEventListener('calio:heroprogress', onHeroProgress);
+    document.removeEventListener('calio:themechange', onThemeChange);
     if (finePointer) window.removeEventListener('pointermove', onPointerMove);
     window.removeEventListener('resize', onResize);
     geo.dispose();

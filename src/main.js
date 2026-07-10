@@ -6,6 +6,7 @@ import './styles/components.css';
 import './styles/sections.css';
 
 import { initI18n } from './js/i18n.js';
+import { initTheme } from './js/theme.js';
 import { initScroll } from './js/scroll.js';
 import { initNav } from './js/nav.js';
 import { initAnimations, initFaq } from './js/animations.js';
@@ -17,6 +18,7 @@ if (reducedMotion) document.documentElement.classList.add('no-motion');
 
 function boot() {
   initI18n();
+  initTheme();
   initScroll(reducedMotion);
   initNav(reducedMotion);
   initFaq(reducedMotion);

@@ -14,6 +14,8 @@ export default {
   'nav.menuOpen': 'Menüyü aç',
   'nav.menuClose': 'Menüyü kapat',
   'nav.langLabel': 'Dil seçimi',
+  'nav.themeToLight': 'Açık temaya geç',
+  'nav.themeToDark': 'Koyu temaya geç',
 
   // Hero
   'hero.badge':

@@ -2,6 +2,13 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
+  <script>
+    try {
+      if (localStorage.getItem('calio_site_theme') === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    } catch (e) {}
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KVKK Aydınlatma Metni — Calio</title>
   <meta name="description" content="Calio tanıtım sitesi demo talep formu için 6698 sayılı KVKK kapsamında aydınlatma metni." />
