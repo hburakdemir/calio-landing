@@ -1,0 +1,81 @@
+/* Standalone legal pages (kvkk.html) — same visual language, document layout. */
+
+.legal-body {
+  background: var(--bg-0);
+}
+
+.legal-page {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4) var(--space-7);
+}
+
+.legal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.legal-back {
+  color: var(--teal-400);
+  text-decoration: none;
+  font-size: var(--fs-small);
+}
+.legal-back:hover { text-decoration: underline; }
+
+.legal-doc h1 {
+  color: var(--text-1);
+  font-size: var(--fs-h2);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: var(--space-6) 0 var(--space-2);
+}
+.legal-doc h1:first-child { margin-top: 0; }
+
+.legal-doc h2 {
+  color: var(--text-1);
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  margin: var(--space-5) 0 var(--space-2);
+}
+
+.legal-doc p,
+.legal-doc li {
+  color: var(--text-2);
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  margin-bottom: var(--space-3);
+}
+
+.legal-doc ul {
+  padding-left: 1.25em;
+  list-style: disc;
+}
+.legal-doc li { margin-bottom: var(--space-1); }
+
+.legal-doc a { color: var(--teal-400); }
+
+.legal-doc strong { color: var(--text-1); font-weight: 600; }
+
+.legal-updated {
+  font-size: var(--fs-small);
+  color: var(--text-3);
+}
+
+.legal-doc hr {
+  border: none;
+  border-top: 1px solid var(--border-1);
+  margin: var(--space-6) 0;
+}
+
+.legal-foot {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-1);
+  color: var(--text-3);
+  font-size: var(--fs-small);
+}
+.legal-foot a { color: var(--teal-400); text-decoration: none; }

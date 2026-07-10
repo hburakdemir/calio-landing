@@ -1,0 +1,120 @@
+/* ============ Reset ============ */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html.lenis { scroll-behavior: auto; } /* Lenis takes over */
+}
+
+body {
+  font-family: var(--font);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  color: var(--text-2);
+  background-color: var(--bg-0);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+img, svg, video, canvas { display: block; max-width: 100%; }
+img { height: auto; }
+button, input, select, textarea { font: inherit; color: inherit; }
+a { color: var(--teal-400); text-decoration: none; }
+ul, ol { padding: 0; list-style: none; }
+h1, h2, h3, h4 { color: var(--text-1); line-height: 1.2; overflow-wrap: break-word; }
+p { overflow-wrap: break-word; }
+
+:focus-visible {
+  outline: 2px solid var(--teal-400);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+::selection { background: rgba(45, 212, 191, 0.3); color: var(--text-1); }
+
+/* ============ Site-wide fixed background ============ */
+.bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.bg-glow {
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.16;
+}
+.bg-glow-teal { top: -280px; left: -240px; background: var(--teal-500); }
+.bg-glow-indigo { bottom: -320px; right: -260px; background: var(--indigo-500); }
+
+/* ============ Layout utilities ============ */
+.container {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+.section { padding-block: var(--section-pad); position: relative; }
+@media (max-width: 767px) {
+  .section { padding-block: var(--space-7); }
+}
+
+.section-head { max-width: 780px; margin-bottom: var(--space-6); }
+.section-head-center { margin-inline: auto; text-align: center; }
+
+.eyebrow {
+  font-size: var(--fs-micro);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal-400);
+  margin-bottom: var(--space-3);
+}
+
+.h2 {
+  font-size: var(--fs-h2);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.section-sub {
+  margin-top: var(--space-3);
+  font-size: var(--fs-body-lg);
+  line-height: 1.65;
+  color: var(--text-2);
+}
+
+.grad-text {
+  background: linear-gradient(90deg, var(--teal-400), var(--indigo-500));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+/* SplitText word divs don't inherit a parent's clipped gradient — re-apply per word. */
+.grad-text .st-word {
+  background: linear-gradient(90deg, var(--teal-400), var(--indigo-500));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Keep decorative loops from running when the user opts out of motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

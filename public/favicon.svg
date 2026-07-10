@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" width="34" height="34" role="img" aria-label="Calio">
+  <rect width="34" height="34" rx="8" fill="#0F766E"/>
+  <path d="M24 11A10 10 0 1 0 24 23" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M24 23l5 5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
