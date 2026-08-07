@@ -60,6 +60,66 @@
   gap: var(--space-3);
   flex: none;
 }
+
+/* Desktop "Kaynaklar" dropdown — native <details>, no JS, deliberately
+   kept OUTSIDE .nav-links so it never enters nav.js's active-link
+   querySelector loop (that loop treats every .nav-links href as a
+   same-page anchor selector, which would throw on a real URL). */
+.nav-resources { position: relative; }
+.nav-resources-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  list-style: none;
+  cursor: pointer;
+  color: var(--text-2);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  padding-block: 4px;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+.nav-resources-toggle::-webkit-details-marker { display: none; }
+.nav-resources-toggle::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+.nav-resources:hover .nav-resources-toggle,
+.nav-resources[open] .nav-resources-toggle { color: var(--text-1); }
+.nav-resources[open] .nav-resources-toggle::after { transform: rotate(-135deg); margin-top: 3px; }
+.nav-resources-panel {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+  padding: var(--space-2);
+  background: var(--menu-bg);
+  border: 1px solid var(--border-1);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-frame);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 10;
+}
+.nav-resources-panel a {
+  padding: 9px 10px;
+  border-radius: var(--radius-sm);
+  color: var(--text-2);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.nav-resources-panel a:hover { background: var(--overlay-3); color: var(--text-1); }
+
 .nav-burger {
   display: none;
   flex-direction: column;
@@ -110,11 +170,22 @@
   font-size: 1.375rem;
   font-weight: 600;
 }
+.mobile-menu-links a.is-sub {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--text-2);
+}
+.mobile-menu-divider {
+  width: 48px;
+  height: 1px;
+  background: var(--border-1);
+}
 .mobile-menu-links .btn { font-size: 1rem; margin-top: var(--space-2); }
 .mobile-menu-controls { display: flex; align-items: center; gap: var(--space-3); }
 
 @media (max-width: 899px) {
   .nav-links { display: none; }
+  .nav-resources { display: none; }
   .nav-burger { display: flex; }
 }
 @media (max-width: 639px) {

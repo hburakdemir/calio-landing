@@ -1,0 +1,205 @@
+/* ============================================================
+   Shared styles for the SEO landing/hub pages:
+   jira-alternatifi.html, kvkk-uyumlu-proje-yonetimi.html,
+   self-hosted-proje-yonetimi.html, sorular.html
+   Builds on legal.css (.legal-page/.legal-head/.legal-doc/.legal-foot)
+   and adds: wider content column, header CTAs, comparison tables,
+   callout boxes, FAQ/Q&A spacing, CTA block, related-pages grid.
+   ============================================================ */
+
+/* Wider content column than the plain legal doc (kvkk.html) — these
+   pages carry comparison tables that need the extra room. */
+.landing-page {
+  max-width: 880px;
+}
+
+/* ============ Header: brand + back-link + CTAs ============ */
+.landing-head {
+  flex-wrap: wrap;
+  row-gap: var(--space-3);
+}
+.landing-head-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.landing-head-actions .legal-back {
+  margin-right: var(--space-1);
+}
+.landing-head-actions .btn {
+  padding: 9px 16px;
+  font-size: var(--fs-micro);
+}
+@media (max-width: 560px) {
+  .landing-head { flex-direction: column; align-items: flex-start; }
+  .landing-head-actions { width: 100%; }
+}
+
+/* ============ Dated byline under H1 ============ */
+.landing-doc .legal-updated {
+  margin-top: calc(-1 * var(--space-1));
+  margin-bottom: var(--space-4);
+}
+
+/* ============ Ordered/unordered lists inside doc body ============ */
+.landing-doc ol {
+  padding-left: 1.25em;
+  list-style: decimal;
+  margin-bottom: var(--space-3);
+}
+.landing-doc ol li,
+.landing-doc ul li { margin-bottom: var(--space-2); }
+
+/* ============ Objection / mini-FAQ blocks (H3 + P) ============ */
+.landing-doc h3 {
+  color: var(--text-1);
+  font-size: var(--fs-body-lg);
+  font-weight: 650;
+  margin: var(--space-4) 0 var(--space-2);
+}
+
+/* ============ Callout boxes ============ */
+.callout {
+  margin: var(--space-4) 0;
+  padding: var(--space-4);
+  border: 1px solid var(--border-1);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  font-size: var(--fs-small);
+  color: var(--text-2);
+}
+.callout p { margin-bottom: 0; font-size: inherit; color: inherit; }
+.callout p + p { margin-top: var(--space-2); }
+.callout strong { color: var(--text-1); }
+
+.callout-warn {
+  border-color: rgba(245, 158, 11, 0.35);
+  background: rgba(245, 158, 11, 0.07);
+}
+.callout-warn strong { color: var(--cta-hover); }
+
+/* ============ Comparison / spec tables ============ */
+.table-scroll {
+  overflow-x: auto;
+  margin: var(--space-4) 0 var(--space-3);
+  border: 1px solid var(--border-1);
+  border-radius: var(--radius-md);
+  -webkit-overflow-scrolling: touch;
+}
+.cmp-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: var(--fs-small);
+}
+.cmp-table th,
+.cmp-table td {
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border-1);
+  line-height: 1.5;
+}
+.cmp-table thead th {
+  background: var(--surface-2);
+  color: var(--text-1);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.cmp-table tbody th[scope="row"] {
+  color: var(--text-1);
+  font-weight: 600;
+  white-space: nowrap;
+  background: var(--surface);
+}
+.cmp-table tbody tr:last-child th,
+.cmp-table tbody tr:last-child td { border-bottom: 0; }
+.cmp-table td, .cmp-table th:not([scope="row"]) { color: var(--text-2); }
+.cmp-table .is-calio {
+  background: rgba(45, 212, 191, 0.08);
+  color: var(--text-1);
+  font-weight: 600;
+}
+.cmp-table thead th.is-calio { background: rgba(45, 212, 191, 0.16); }
+.cmp-table a { text-decoration: underline; text-underline-offset: 2px; }
+
+.table-note {
+  font-size: var(--fs-micro);
+  color: var(--text-3);
+  font-style: italic;
+  margin: 0 0 var(--space-4);
+}
+
+/* ============ CTA block ============ */
+.landing-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin: var(--space-5) 0 var(--space-4);
+}
+
+/* ============ Related pages ("İlgili sayfalar") ============ */
+.related-pages {
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--border-1);
+}
+.related-pages h2 {
+  color: var(--text-1);
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: var(--space-3);
+}
+.related-card {
+  display: block;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border-1);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--text-1);
+  font-weight: 600;
+  font-size: var(--fs-small);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.related-card:hover { border-color: var(--border-teal); background: var(--surface-2); }
+.related-card span {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-3);
+  font-weight: 400;
+  font-size: var(--fs-micro);
+}
+
+/* ============ Q&A hub (sorular.html) ============ */
+.qa-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin: var(--space-5) 0;
+}
+.qa-item {
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--border-1);
+}
+.qa-item:last-child { border-bottom: 0; padding-bottom: 0; }
+.qa-item h2 {
+  scroll-margin-top: 24px;
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+.qa-item p { margin-bottom: 0; }
+.qa-permalink {
+  display: inline-block;
+  margin-top: var(--space-2);
+  font-size: var(--fs-micro);
+  color: var(--text-3);
+}
+.qa-permalink:hover { color: var(--teal-400); }

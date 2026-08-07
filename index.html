@@ -56,6 +56,15 @@
       </nav>
 
       <div class="nav-right">
+        <details class="nav-resources">
+          <summary class="nav-resources-toggle">Kaynaklar</summary>
+          <div class="nav-resources-panel">
+            <a href="/jira-alternatifi.html">Jira Alternatifi</a>
+            <a href="/kvkk-uyumlu-proje-yonetimi.html">KVKK Uyumlu Proje Yönetimi</a>
+            <a href="/self-hosted-proje-yonetimi.html">Self-Hosted Proje Yönetimi</a>
+            <a href="/sorular.html">Sorular ve Cevaplar</a>
+          </div>
+        </details>
         <button type="button" class="theme-toggle" aria-pressed="false" data-i18n-attr="aria-label:nav.themeToLight" aria-label="Açık temaya geç">
           <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="4.5"/>
@@ -69,6 +78,7 @@
           <button type="button" class="lang-btn" data-locale="tr" aria-pressed="true">TR</button>
           <button type="button" class="lang-btn" data-locale="en" aria-pressed="false">EN</button>
         </div>
+        <a href="https://demo.calio.space" class="btn btn-ghost nav-try" target="_blank" rel="noopener" data-i18n="nav.ctaTry">Demoyu Dene</a>
         <a href="#demo" class="btn btn-primary btn-magnetic nav-cta" data-i18n="nav.cta">Demo Talep Et</a>
         <button type="button" class="nav-burger" aria-label="Menüyü aç" data-i18n-attr="aria-label:nav.menuOpen" aria-expanded="false" aria-controls="mobile-menu">
           <span class="burger-line"></span>
@@ -84,6 +94,12 @@
         <a href="#security" data-i18n="nav.security">Güvenlik</a>
         <a href="#pricing" data-i18n="nav.pricing">Fiyatlandırma</a>
         <a href="#faq" data-i18n="nav.faq">SSS</a>
+        <span class="mobile-menu-divider" aria-hidden="true"></span>
+        <a class="is-sub" href="/jira-alternatifi.html">Jira Alternatifi</a>
+        <a class="is-sub" href="/kvkk-uyumlu-proje-yonetimi.html">KVKK Uyumlu Proje Yönetimi</a>
+        <a class="is-sub" href="/self-hosted-proje-yonetimi.html">Self-Hosted Proje Yönetimi</a>
+        <a class="is-sub" href="/sorular.html">Sorular ve Cevaplar</a>
+        <a href="https://demo.calio.space" class="btn btn-ghost" target="_blank" rel="noopener" data-i18n="nav.ctaTry">Demoyu Dene</a>
         <a href="#demo" class="btn btn-primary" data-i18n="nav.cta">Demo Talep Et</a>
       </nav>
       <div class="mobile-menu-controls">
@@ -126,7 +142,8 @@
         </h1>
         <p class="hero-sub" data-i18n="hero.sub">Kanban panoları, ekip sohbeti, sesli/görüntülü arama, takvim ve denetim kaydı — kendi sunucunuzda çalışır, verileriniz Türkiye’den çıkmaz.</p>
         <div class="hero-ctas">
-          <a href="#demo" class="btn btn-primary btn-lg btn-magnetic" data-i18n="hero.cta1">Demo Talep Et</a>
+          <a href="https://demo.calio.space" class="btn btn-primary btn-lg btn-magnetic" target="_blank" rel="noopener" data-i18n="hero.ctaTry">Demoyu Hemen Dene</a>
+          <a href="#demo" class="btn btn-ghost btn-lg" data-i18n="hero.cta1">Demo Talep Et</a>
           <a href="#tour" class="btn btn-ghost btn-lg" data-i18n="hero.cta2">Ürünü Keşfet</a>
         </div>
       </div>
@@ -671,6 +688,50 @@
               <p data-i18n="faq.a8">Çok yakında, TL bazında. Demo talep edenlere lansman fiyatı ilk olarak iletilecek.</p>
             </div>
           </div>
+          <div class="faq-item">
+            <h3 class="faq-q">
+              <button type="button" id="faq-b9" aria-expanded="false" aria-controls="faq-a9">
+                <span data-i18n="faq.q9">Tek geliştiriciyseniz, size bir şey olursa ne olur?</span>
+                <svg class="faq-chevron" width="14" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </button>
+            </h3>
+            <div class="faq-a" id="faq-a9" role="region" aria-labelledby="faq-b9" hidden>
+              <p data-i18n="faq.a9">Calio kendi sunucunuzda çalışır ve veritabanı sizdedir — bu bir 'vendor lock-in' riski taşımadığı anlamına gelir. Kaynak kod ve verileriniz bize değil, kendi altyapınıza bağımlıdır. Ekibimizi büyüttükçe bu konudaki planlarımızı demo görüşmesinde açıkça paylaşırız.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q">
+              <button type="button" id="faq-b10" aria-expanded="false" aria-controls="faq-a10">
+                <span data-i18n="faq.q10">Ekibim ofis dışından bağlanabilir mi?</span>
+                <svg class="faq-chevron" width="14" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </button>
+            </h3>
+            <div class="faq-a" id="faq-a10" role="region" aria-labelledby="faq-b10" hidden>
+              <p data-i18n="faq.a10">Evet. Sunucunuzu şirket ağınızda bir IP ile ya da kendi alan adınızla yayınlarsanız, ekibiniz evden, sahadan veya seyahatteyken normal internet üzerinden bağlanır — VPN zorunlu değildir, tercihen ek bir güvenlik katmanı olarak kullanılabilir.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q">
+              <button type="button" id="faq-b11" aria-expanded="false" aria-controls="faq-a11">
+                <span data-i18n="faq.q11">Telefondan da kullanılabiliyor mu?</span>
+                <svg class="faq-chevron" width="14" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </button>
+            </h3>
+            <div class="faq-a" id="faq-a11" role="region" aria-labelledby="faq-b11" hidden>
+              <p data-i18n="faq.a11">Tarayıcı üzerinden telefon ve tabletten de giriş yapıp panolarınızı, sohbeti ve takvimi görebilirsiniz. Ayrı bir mobil uygulama şu an yok; sürükle-bırak pano deneyimi tablet ve masaüstünde en rahat kullanım için tasarlandı.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q">
+              <button type="button" id="faq-b12" aria-expanded="false" aria-controls="faq-a12">
+                <span data-i18n="faq.q12">Kimin için doğru değil?</span>
+                <svg class="faq-chevron" width="14" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </button>
+            </h3>
+            <div class="faq-a" id="faq-a12" role="region" aria-labelledby="faq-b12" hidden>
+              <p data-i18n="faq.a12">Ekibiniz 200+ kişiyse ya da sunucu yönetecek kimseniz yoksa, Calio şu an için doğru seçim olmayabilir — bunu demo görüşmesinde dürüstçe konuşuruz.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -822,6 +883,10 @@
         <a href="#pricing" data-i18n="nav.pricing">Fiyatlandırma</a>
         <a href="#faq" data-i18n="nav.faq">SSS</a>
         <a href="#demo" data-i18n="nav.cta">Demo Talep Et</a>
+        <a href="/jira-alternatifi.html">Jira Alternatifi</a>
+        <a href="/kvkk-uyumlu-proje-yonetimi.html">KVKK Uyumlu Proje Yönetimi</a>
+        <a href="/self-hosted-proje-yonetimi.html">Self-Hosted Proje Yönetimi</a>
+        <a href="/sorular.html">Sorular ve Cevaplar</a>
       </nav>
 
       <div class="footer-contact">

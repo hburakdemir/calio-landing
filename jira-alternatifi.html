@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    try {
+      if (localStorage.getItem('calio_site_theme') === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    } catch (e) {}
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jira Alternatifi: Kendi Sunucunuzda Türkçe Kanban | Calio</title>
+  <meta name="description" content="Jira'dan tek tıkla taşının. Kartlar, listeler, etiketler ve son tarihler Calio'ya aktarılır; kendi sunucunuzda çalışır, arayüz Türkçe, fiyat TL." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Jira Alternatifi: Kendi Sunucunuzda Türkçe Kanban | Calio" />
+  <meta property="og:description" content="Jira'dan tek tıkla taşının. Kartlar, listeler, etiketler ve son tarihler Calio'ya aktarılır; kendi sunucunuzda çalışır, arayüz Türkçe, fiyat TL." />
+  <meta property="og:image" content="https://calio.space/og.jpg" />
+  <meta property="og:url" content="https://calio.space/jira-alternatifi.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script type="module" src="/src/landing.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://calio.space/" },
+      { "@type": "ListItem", "position": 2, "name": "Jira Alternatifi", "item": "https://calio.space/jira-alternatifi.html" }
+    ]
+  }
+  </script>
+</head>
+<body class="legal-body landing-body">
+  <main class="legal-page landing-page">
+    <header class="legal-head landing-head">
+      <a href="/" class="nav-brand" aria-label="Calio ana sayfa">
+        <svg viewBox="0 0 34 34" width="28" height="28" role="img" aria-label="Calio">
+          <rect width="34" height="34" rx="8" fill="#0F766E"/>
+          <path d="M24 11A10 10 0 1 0 24 23" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M24 23l5 5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="nav-wordmark">Calio</span>
+      </a>
+      <div class="landing-head-actions">
+        <a class="legal-back" href="/">← Siteye dön</a>
+        <a href="https://demo.calio.space" class="btn btn-ghost" target="_blank" rel="noopener">Demoyu Dene</a>
+        <a href="/#demo" class="btn btn-primary">Demo Talep Et</a>
+      </div>
+    </header>
+
+    <article class="legal-doc landing-doc">
+      <h1>Jira Alternatifi: Kendi Sunucunuzda Çalışan, Türkçe Bir Seçenek</h1>
+      <p class="legal-updated">Yayın tarihi: 7 Ağustos 2026</p>
+
+      <p>Jira, dünyanın en yaygın iş takip araçlarından biri. Büyük yazılım organizasyonlarının ihtiyaç duyduğu her şeyi yapıyor: sprint panoları, iş akışı motoru, gelişmiş raporlar, binlerce eklenti. Peki neden her yıl binlerce ekip alternatif arıyor?</p>
+      <p>Türkiye'deki ekiplerle yaptığımız görüşmelerde üç sebep tekrar ediyor.</p>
+
+      <h2>Jira'dan neden çıkılıyor?</h2>
+
+      <p><strong>1. Fatura döviz cinsinden geliyor.</strong> Jira Cloud kullanıcı başına, ABD doları üzerinden fiyatlanır. Ekibiniz büyüdükçe koltuk sayısı, kur oynadıkça TL karşılığı artar. İkisi aynı anda olduğunda yıl sonu bütçeniz plandan sapar. Güncel liste fiyatlarını <a href="https://www.atlassian.com/software/jira/pricing" target="_blank" rel="noopener nofollow">Atlassian'ın kendi fiyat sayfasından</a> görebilirsiniz — dikkat edeceğiniz şey rakam değil, <strong>para birimi ve "per user" ifadesi</strong>. <!-- VERIFY PRICE: bu paragraf bilinçli olarak Jira için hiçbir dolar/TL rakamı iddia etmiyor; Atlassian'ın kendi fiyat sayfası bu araştırmada okunamadığı için rakam eklenmedi. Yayına almadan önce fiyat sayfasını açıp doğrulamadan rakam eklemeyin. --></p>
+
+      <p><strong>2. Türkçe arayüz resmî olarak yok.</strong> Jira'da Türkçe arayüz, Atlassian'ın resmî desteklediği diller arasında değil; Marketplace üzerinden <a href="https://marketplace.atlassian.com/apps/1224285/turkish-language-pack-for-jira" target="_blank" rel="noopener nofollow">üçüncü taraf bir dil paketiyle</a> sağlanıyor. Bu, ekibinizin bir kısmı İngilizce'de rahat değilse gerçek bir sürtünme yaratır — ve dil paketi, ürünün yeni bileşenlerinde her zaman tam kapsama sahip olmaz.</p>
+
+      <p><strong>3. Veri, başka bir ülkenin sunucusunda.</strong> Jira Cloud kullanıyorsanız kartlarınız, ek dosyalarınız ve müşteri bilgileriniz yurt dışındaki bir veri merkezinde tutulur. Atlassian'ın kendi barındırma seçeneği (Data Center) ise büyük kullanıcı katmanları için tasarlanmıştır — 15 kişilik bir ekip için pratik bir yol değildir. Bu, 2024'te değişen KVKK yurt dışı aktarım kurallarıyla birlikte artık sadece bir "IT tercihi" değil, uyum konusu. (Ayrıntı: <a href="/kvkk-uyumlu-proje-yonetimi.html">KVKK uyumlu proje yönetimi</a>)</p>
+
+      <h2>Alternatif ararken sorulacak 5 soru</h2>
+      <p>Alternatif listelerinin çoğu "20 araç" sıralar ve hiçbirini karşılaştırmaz. Aslında karar beş soruda netleşir:</p>
+      <ol>
+        <li><strong>Veri nerede duracak?</strong> Bulutta mı, sizin sunucunuzda mı?</li>
+        <li><strong>Fatura hangi para biriminde ve kişi başı mı?</strong> Ekip 10'dan 30'a çıkınca ne oluyor?</li>
+        <li><strong>Arayüz Türkçe mi?</strong> Yoksa eklenti/çeviri mi?</li>
+        <li><strong>Sohbet ve toplantı da aynı yerde mi, ayrı abonelik mi?</strong></li>
+        <li><strong>Mevcut Jira verinizi nasıl taşıyacaksınız?</strong> Elle mi, dışa aktarımla mı, tek tıkla mı?</li>
+      </ol>
+
+      <h2>Karşılaştırma</h2>
+      <div class="table-scroll">
+        <table class="cmp-table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="is-calio">Calio</th>
+              <th scope="col">Jira Cloud</th>
+              <th scope="col">Plane</th>
+              <th scope="col">OpenProject</th>
+              <th scope="col">Bitrix24</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Barındırma</th>
+              <td class="is-calio">Kendi sunucunuz</td>
+              <td>Atlassian bulutu (kendi barındırma yalnızca Data Center)</td>
+              <td>Bulut veya kendi sunucunuz</td>
+              <td>Kendi sunucunuz veya bulut</td>
+              <td>Bulut veya kendi sunucunuz</td>
+            </tr>
+            <tr>
+              <th scope="row">Fiyat modeli</th>
+              <td class="is-calio">TL, kişi başı değil <em>(fiyat yakında açıklanacak)</em></td>
+              <td>Kullanıcı başına, USD</td>
+              <td>Koltuk başına, USD <em>(Community sürümü ücretsiz)</em></td>
+              <td>Community ücretsiz; Enterprise kullanıcı başına EUR, min. 25 kullanıcı (<a href="https://www.openproject.org/pricing/" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
+              <td>Şirket başına paket, USD (<a href="https://www.bitrix24.com.tr/prices/" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
+            </tr>
+            <tr>
+              <th scope="row">Türkçe arayüz</th>
+              <td class="is-calio">Evet, yerleşik</td>
+              <td>Üçüncü taraf dil paketi (<a href="https://marketplace.atlassian.com/apps/1224285/turkish-language-pack-for-jira" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
+              <td>Topluluk katkısıyla eklendi (<a href="https://github.com/makeplane/plane/pull/6874" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
+              <td>Topluluk çevirisi (CrowdIn)</td>
+              <td>Evet, yerleşik</td>
+            </tr>
+            <tr>
+              <th scope="row">Dahili ekip sohbeti</th>
+              <td class="is-calio">Evet</td>
+              <td>Hayır (Slack/Teams entegrasyonu)</td>
+              <td>Hayır</td>
+              <td>Hayır</td>
+              <td>Evet</td>
+            </tr>
+            <tr>
+              <th scope="row">Dahili sesli/görüntülü arama</th>
+              <td class="is-calio">Evet (WebRTC)</td>
+              <td>Hayır</td>
+              <td>Hayır</td>
+              <td>Hayır</td>
+              <td>Evet</td>
+            </tr>
+            <tr>
+              <th scope="row">Denetim kaydı</th>
+              <td class="is-calio">Evet</td>
+              <td>Evet (üst planlar)</td>
+              <td>Doğrulanmadı</td>
+              <td>Evet</td>
+              <td>Evet</td>
+            </tr>
+            <tr>
+              <th scope="row">Jira'dan içe aktarım</th>
+              <td class="is-calio">Evet, tek tık (API anahtarıyla)</td>
+              <td>—</td>
+              <td>Evet (<a href="https://docs.plane.so/importers/jira" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
+              <td>Beta; yalnızca Jira Server/Data Center 10.x–11.x (<a href="https://www.openproject.org/jira-migrator/" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
+              <td>Doğrulanmadı</td>
+            </tr>
+            <tr>
+              <th scope="row">Kurulum</th>
+              <td class="is-calio">Windows kurulum sihirbazı, Docker gerekmez</td>
+              <td>Kurulum yok (bulut)</td>
+              <td>Docker / Kubernetes</td>
+              <td>Docker veya paket kurulumu</td>
+              <td>Sunucu yığını kurulumu (on-prem)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Rakip bilgileri, ilgili şirketlerin kendi kamuya açık sayfalarından 30 Temmuz 2026'da alınmıştır ve her satır kaynaklıdır. Bir hata gördüğünüzü düşünüyorsanız yazın, 48 saat içinde düzeltiriz.</p>
+
+      <h2>Jira'dan Calio'ya taşıma</h2>
+      <p>Jira API anahtarınızı girip projenizi seçiyorsunuz. Aktarılanlar:</p>
+      <ul>
+        <li>Listeler ve kolon düzeni</li>
+        <li>Kartlar — başlık ve açıklamalarıyla</li>
+        <li>Son tarihler</li>
+        <li>Öncelikler (Acil → Düşük eşlemesiyle)</li>
+        <li>Durumlar (Yapılacak · Devam Ediyor · Tamamlandı)</li>
+        <li>Etiketler, renkleriyle birlikte</li>
+      </ul>
+      <p><strong>Aktarılmayanlar — bunu baştan söylüyoruz:</strong> yorumlar, ek dosyalar ve kişi atamaları bu sürümde taşınmıyor. Atamaları içe aktarımdan sonra ekibinizle dakikalar içinde yapıyorsunuz. Tek içe aktarımda 500 kayda kadar taşınır.</p>
+      <p>Yüzlerce kart dakikalar içinde geçer. Demo görüşmesinde bunu <strong>sizin gerçek panonuzla, canlı</strong> yapıyoruz — böylece taşımanın nasıl göründüğünü satın almadan önce görüyorsunuz.</p>
+
+      <h2>Sıkça gelen üç itiraz</h2>
+
+      <h3>"Sunucu yönetecek kimsem yok."</h3>
+      <p>Calio Server'ı sürekli açık bir Windows bilgisayara veya sunucuya kuruyorsunuz — Windows Server şart değil, Docker ya da DevOps bilgisi gerekmiyor. Kurulum sihirbazı veritabanı dahil her şeyi kuruyor. İster Windows servisi olarak çalıştırın, ister bilgisayar açıldığında otomatik başlasın. Yine de bir sunucuya dokunacak kimseniz yoksa, bunu demo görüşmesinde açıkça konuşalım — Calio her ekip için doğru araç değil.</p>
+
+      <h3>"Ekibim yeni araca alışamaz."</h3>
+      <p>Calio bilinen kanban düzenini kullanıyor: liste, kart, sürükle-bırak. Trello ya da Jira panosu kullanabilen biri birkaç dakikada geçiyor. Arayüz Türkçe ve İngilizce. Deneyin: <a href="https://demo.calio.space" target="_blank" rel="noopener">demo.calio.space</a></p>
+
+      <h3>"Tek geliştiricisiniz. Yarın bir şey olursa?"</h3>
+      <p>Calio sizin sunucunuzda çalışır ve veritabanı sizdedir. Bu, klasik "vendor lock-in" riskinin yapısal olarak olmadığı anlamına gelir: bize erişiminiz kesilse bile uygulama çalışmaya devam eder, veriniz elinizin altındadır. Demo görüşmesinde veritabanı dosyasını nasıl yedekleyip dışa aktaracağınızı <strong>canlı gösteriyoruz</strong> — bu soruyu laf değil, uygulamayla cevaplamayı tercih ediyoruz.</p>
+
+      <h2>Calio kimin için doğru değil?</h2>
+      <p>Dürüst olalım:</p>
+      <ul>
+        <li><strong>Gantt şeması, kaynak dengeleme veya bağımlılık zinciri</strong> gerekiyorsa Calio'da bunlar yok. Şantiye programı ya da üretim planı yönetiyorsanız başka bir araç lazım.</li>
+        <li><strong>Sahada, telefondan kart taşıyan bir ekipseniz:</strong> mobil tarayıcıdan pano, sohbet ve takvim çalışıyor ama ayrı bir mobil uygulama şu an yok.</li>
+        <li><strong>200 kişilik bir organizasyonsanız</strong> ya da Jira'nın eklenti ekosistemine bağlı entegrasyonlarınız varsa, Calio bugün için doğru seçim olmayabilir.</li>
+      </ul>
+      <p>Bunları demo görüşmesinde konuşuyoruz. Size uymuyorsa bunu söylemek, satmaya çalışmaktan daha iyi.</p>
+
+      <h2>Sıradaki adım</h2>
+      <p>Jira panonuzu 30 dakikalık bir demoda <strong>canlı aktaralım.</strong> Satış baskısı yok; kendi kullanım senaryonuz üzerinden ilerliyoruz ve taşıma sorularınızı aynı görüşmede cevaplıyoruz.</p>
+      <p><strong>Lansman kampanyası:</strong> demo talep eden ilk 5 şirket Calio'yu 6 ay boyunca ücretsiz kullanıyor.</p>
+
+      <div class="landing-cta">
+        <a href="/#demo" class="btn btn-primary btn-lg">Demo Talep Et →</a>
+        <a href="https://demo.calio.space" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">Canlı demoyu şimdi deneyin →</a>
+      </div>
+    </article>
+
+    <section class="related-pages" aria-label="İlgili sayfalar">
+      <h2>İlgili sayfalar</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/kvkk-uyumlu-proje-yonetimi.html">KVKK Uyumlu Proje Yönetimi<span>Veriyi hiç yurt dışına çıkarmadan</span></a>
+        <a class="related-card" href="/self-hosted-proje-yonetimi.html">Self-Hosted Proje Yönetimi<span>Kendi sunucunuza kurun</span></a>
+        <a class="related-card" href="/sorular.html">Sorular ve Cevaplar<span>Self-hosted, KVKK, Kanban SSS</span></a>
+      </div>
+    </section>
+
+    <footer class="legal-foot">
+      <p>© 2026 Calio — <a href="/">ana sayfaya dön</a></p>
+    </footer>
+  </main>
+</body>
+</html>

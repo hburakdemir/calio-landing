@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    try {
+      if (localStorage.getItem('calio_site_theme') === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    } catch (e) {}
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sık Sorulan Sorular: Self-Hosted, KVKK, Kanban | Calio</title>
+  <meta name="description" content="Self-hosted proje yönetimi, KVKK yurt dışına veri aktarımı ve Kanban terimleri üzerine 15 kısa, kaynaklı soru-cevap. Her soru ayrı bağlantıyla paylaşılabilir." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Sık Sorulan Sorular: Self-Hosted, KVKK, Kanban | Calio" />
+  <meta property="og:description" content="Self-hosted proje yönetimi, KVKK yurt dışına veri aktarımı ve Kanban terimleri üzerine 15 kısa, kaynaklı soru-cevap. Her soru ayrı bağlantıyla paylaşılabilir." />
+  <meta property="og:image" content="https://calio.space/og.jpg" />
+  <meta property="og:url" content="https://calio.space/sorular.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script type="module" src="/src/landing.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://calio.space/" },
+      { "@type": "ListItem", "position": 2, "name": "Sorular ve Cevaplar", "item": "https://calio.space/sorular.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://calio.space/sorular.html#faq",
+    "inLanguage": "tr-TR",
+    "mainEntity": [
+      { "@type": "Question", "name": "Self-hosted proje yönetimi nedir?", "acceptedAnswer": { "@type": "Answer", "text": "Self-hosted proje yönetimi, yazılımın ve veritabanının bir sağlayıcının bulutunda değil, şirketin kendi sunucusunda çalıştırılmasıdır. Görev kartları, dosyalar ve kullanıcı hesapları o sunucuda kalır. Erişim yönetimi, yedekleme ve güncelleme sorumluluğu şirkete geçer. Bulut aboneliğinden temel farkı, verinin şirket altyapısından hiç çıkmamasıdır." } },
+      { "@type": "Question", "name": "Self-hosted ile bulut (SaaS) proje yönetimi arasındaki fark nedir?", "acceptedAnswer": { "@type": "Answer", "text": "Bulut proje yönetiminde yazılım sağlayıcının sunucusunda çalışır, veriler sağlayıcıda durur ve genellikle kişi başı aylık abonelik ödenir. Self-hosted modelde yazılım şirketin kendi sunucusunda çalışır, veriler şirkette kalır. Bulut daha az bakım ister; self-hosted veri konumu, erişim ve maliyet modeli üzerinde tam kontrol verir." } },
+      { "@type": "Question", "name": "Jira verileri Türkiye'de tutulabilir mi?", "acceptedAnswer": { "@type": "Answer", "text": "Jira Cloud verileri Atlassian'ın seçtiği bölgelerde barındırılır ve Türkiye bu bölgeler arasında değildir. Verileri Türkiye'de tutmanın iki yolu vardır: Jira'nın kendi sunucunuza kurulan sürümünü kullanmak veya verileri Türkiye'de barındırılan bir alternatife taşımak. Bulut sürümü kullanılmaya devam edilecekse, KVKK yurt dışına aktarım kuralları uygulanır." } },
+      { "@type": "Question", "name": "KVKK proje yönetim yazılımı için ne gerektirir?", "acceptedAnswer": { "@type": "Answer", "text": "KVKK, proje yönetim yazılımında işlenen kişisel veriler için hukuki dayanak, aydınlatma yükümlülüğü, veri güvenliği tedbirleri ve VERBİS kaydı gerektirir. Yazılım yurt dışında barındırılıyorsa ayrıca yurt dışına aktarım rejimi devreye girer: yeterlilik kararı yoksa standart sözleşme gibi bir uygun güvence sağlanmalıdır. Veriler Türkiye'de kalıyorsa aktarım kuralları uygulanmaz." } },
+      { "@type": "Question", "name": "KVKK'ya göre yurt dışına veri aktarımında açık rıza yeterli mi?", "acceptedAnswer": { "@type": "Answer", "text": "1 Haziran 2024'te yürürlüğe giren değişiklikten sonra açık rıza, yurt dışına veri aktarımında yalnızca arızi aktarımlar için geçerli bir dayanaktır. Bir bulut yazılımının günlük kullanımı gibi süreklilik arz eden aktarımlarda açık rıza tek başına yeterli değildir; standart sözleşme veya bağlayıcı şirket kuralları gibi bir uygun güvence gerekir." } },
+      { "@type": "Question", "name": "Standart sözleşme KVKK'ya kaç gün içinde bildirilir?", "acceptedAnswer": { "@type": "Answer", "text": "Yurt dışına veri aktarımında kullanılan standart sözleşme, imza tarihinden itibaren beş iş günü içinde Kişisel Verileri Koruma Kurumu'na bildirilmek zorundadır. Bildirim, Kurumun Standart Sözleşme Bildirim Modülü üzerinden, fiziksel olarak veya KEP ile yapılabilir. Bildirim yükümlülüğünün ihlali idari para cezasına tabidir." } },
+      { "@type": "Question", "name": "Jira'dan başka bir araca geçerken veriler nasıl taşınır?", "acceptedAnswer": { "@type": "Answer", "text": "Jira'dan geçiş genellikle API üzerinden yapılır: hedef araçta Jira alan adı, e-posta ve API token girilir, taşınacak proje seçilir ve listeler, kartlar, son tarihler, öncelikler ile etiketler aktarılır. Çoğu göç aracında yorumlar, ek dosyalar ve kişi atamaları aktarılmaz; bunlar geçişten sonra manuel olarak yeniden kurulur." } },
+      { "@type": "Question", "name": "Self-hosted yazılım için sistem yöneticisi şart mı?", "acceptedAnswer": { "@type": "Answer", "text": "Şart değildir, ancak bir sorumlu belirlenmesi gerekir. Kurulum sihirbazıyla gelen modern self-hosted uygulamalar veritabanı dahil kurulumu otomatikleştirir ve Docker bilgisi gerektirmez. Buna karşılık sunucunun güncel tutulması, yedeklerin alınması ve erişim yetkilerinin yönetilmesi süreklidir; bu işleri üstlenecek en az bir kişi olmadan self-hosted model risklidir." } },
+      { "@type": "Question", "name": "Self-hosted yazılım bulut kadar güvenli mi?", "acceptedAnswer": { "@type": "Answer", "text": "Güvenlik, modelden çok uygulamaya bağlıdır. Bulut sağlayıcıları profesyonel güvenlik ekipleri çalıştırır ancak veri paylaşılan bir altyapıda ve genellikle başka bir ülkededir. Self-hosted modelde saldırı yüzeyi daralır ve veri şirket ağında kalır, fakat yamalar, yedekler ve erişim yönetimi şirketin sorumluluğundadır. İhmal edilen bir self-hosted sunucu, bulut aboneliğinden daha risklidir." } },
+      { "@type": "Question", "name": "Kanban nedir?", "acceptedAnswer": { "@type": "Answer", "text": "Kanban, işin görsel olarak yönetildiği bir akış yöntemidir. İşler kartlara yazılır, kartlar bir panoda \"Yapılacak\", \"Devam Ediyor\" ve \"Tamamlandı\" gibi kolonlar arasında ilerletilir. Temel kuralı, aynı anda devam eden iş sayısını sınırlamaktır (WIP limiti). Amaç, kapasiteyi aşmadan işin akış hızını artırmaktır." } },
+      { "@type": "Question", "name": "WIP limiti nedir?", "acceptedAnswer": { "@type": "Answer", "text": "WIP limiti (work in progress limit), bir kanban kolonunda aynı anda bulunabilecek maksimum kart sayısıdır. Limit dolduğunda yeni iş başlatılmaz, önce mevcut işler bitirilir. Amacı çoklu görev yükünü azaltmak ve darboğazları görünür kılmaktır. Yaygın başlangıç noktası, kolon başına kişi sayısının bir fazlasıdır." } },
+      { "@type": "Question", "name": "Verileri Türkiye'de tutan proje yönetim yazılımı var mı?", "acceptedAnswer": { "@type": "Answer", "text": "Evet. İki yol vardır: verileri Türkiye'deki veri merkezlerinde barındıran bulut hizmetleri veya şirketin kendi sunucusuna kurulan self-hosted yazılımlar. Self-hosted seçenekte veri hiç dışarı çıkmadığı için yurt dışına aktarım rejimi devreye girmez. Bulut seçeneğinde sağlayıcının alt yüklenicilerinin de Türkiye'de olduğunu sözleşmede doğrulamak gerekir." } },
+      { "@type": "Question", "name": "Calio nedir?", "acceptedAnswer": { "@type": "Answer", "text": "Calio, şirketlerin kendi sunucusunda çalışan bir proje yönetim platformudur. Kanban panoları, ekip sohbeti, sesli ve görüntülü arama, takvim, hatırlatıcılar, denetim kaydı ve rol tabanlı yetkilendirmeyi tek uygulamada toplar. Jira, Trello, Azure DevOps ve Notion'dan içe aktarım destekler. Arayüzü Türkçe ve İngilizcedir; Türkiye'de geliştirilmektedir." } },
+      { "@type": "Question", "name": "Calio hangi araçlardan içe aktarım destekliyor?", "acceptedAnswer": { "@type": "Answer", "text": "Calio, Jira, Trello, Azure DevOps ve Notion'dan içe aktarımı destekler. Listeler, kartlar, başlık ve açıklamalar, son tarihler, öncelikler, durumlar ve renkleriyle birlikte etiketler aktarılır. Bu sürümde yorumlar, ek dosyalar ve kişi atamaları aktarılmaz; tek içe aktarımda 500 kayda kadar taşınır." } },
+      { "@type": "Question", "name": "Calio açık kaynak mı?", "acceptedAnswer": { "@type": "Answer", "text": "Hayır. Calio kapalı kaynaklı ticari bir üründür; kaynak kodu kamuya açık değildir. Buna karşılık yazılım müşterinin kendi sunucusunda çalışır ve veritabanı müşteride kalır. Bu nedenle veriler her zaman dışa aktarılabilir ve sağlayıcıya bağımlılık riski bulut aboneliklerine göre düşüktür." } }
+    ]
+  }
+  </script>
+</head>
+<body class="legal-body landing-body">
+  <main class="legal-page landing-page">
+    <header class="legal-head landing-head">
+      <a href="/" class="nav-brand" aria-label="Calio ana sayfa">
+        <svg viewBox="0 0 34 34" width="28" height="28" role="img" aria-label="Calio">
+          <rect width="34" height="34" rx="8" fill="#0F766E"/>
+          <path d="M24 11A10 10 0 1 0 24 23" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M24 23l5 5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="nav-wordmark">Calio</span>
+      </a>
+      <div class="landing-head-actions">
+        <a class="legal-back" href="/">← Siteye dön</a>
+        <a href="https://demo.calio.space" class="btn btn-ghost" target="_blank" rel="noopener">Demoyu Dene</a>
+        <a href="/#demo" class="btn btn-primary">Demo Talep Et</a>
+      </div>
+    </header>
+
+    <article class="legal-doc landing-doc">
+      <h1>Sorular ve Cevaplar</h1>
+      <p class="legal-updated">Yayın tarihi: 7 Ağustos 2026</p>
+      <p>Self-hosted proje yönetimi, KVKK'nın yurt dışına veri aktarımı kuralları ve kanban terimleri üzerine kısa, kaynaklı cevaplar. Her soru kendi bağlantısına sahiptir; doğrudan bir soruya link vermek isterseniz başlığına tıklayıp adres çubuğundaki bağlantıyı kopyalayabilirsiniz.</p>
+
+      <div class="qa-list">
+        <div class="qa-item">
+          <h2 id="self-hosted-nedir">Self-hosted proje yönetimi nedir?</h2>
+          <p>Self-hosted proje yönetimi, yazılımın ve veritabanının bir sağlayıcının bulutunda değil, şirketin kendi sunucusunda çalıştırılmasıdır. Görev kartları, dosyalar ve kullanıcı hesapları o sunucuda kalır. Erişim yönetimi, yedekleme ve güncelleme sorumluluğu şirkete geçer. Bulut aboneliğinden temel farkı, verinin şirket altyapısından hiç çıkmamasıdır.</p>
+          <a class="qa-permalink" href="#self-hosted-nedir">Kalıcı bağlantı: /sorular#self-hosted-nedir</a>
+        </div>
+
+        <div class="qa-item">
+          <h2 id="self-hosted-bulut-farki">Self-hosted ile bulut (SaaS) proje yönetimi arasındaki fark nedir?</h2>
+          <p>Bulut proje yönetiminde yazılım sağlayıcının sunucusunda çalışır, veriler sağlayıcıda durur ve genellikle kişi başı aylık abonelik ödenir. Self-hosted modelde yazılım şirketin kendi sunucusunda çalışır, veriler şirkette kalır. Bulut daha az bakım ister; self-hosted veri konumu, erişim ve maliyet modeli üzerinde tam kontrol verir.</p>
+          <a class="qa-permalink" href="#self-hosted-bulut-farki">Kalıcı bağlantı: /sorular#self-hosted-bulut-farki</a>
+        </div>
+
+        <div class="qa-item">
+          <h2 id="jira-verileri-turkiyede">Jira verileri Türkiye'de tutulabilir mi?</h2>
+          <p>Jira Cloud verileri Atlassian'ın seçtiği bölgelerde barındırılır ve Türkiye bu bölgeler arasında değildir. Verileri Türkiye'de tutmanın iki yolu vardır: Jira'nın kendi sunucunuza kurulan sürümünü kullanmak veya verileri Türkiye'de barındırılan bir alternatife taşımak. Bulut sürümü kullanılmaya devam edilecekse, KVKK yurt dışına aktarım kuralları uygulanır.</p>
+          <a class="qa-permalink" href="#jira-verileri-turkiyede">Kalıcı bağlantı: /sorular#jira-verileri-turkiyede</a>
+        </div>
+
+        <div class="qa-item">
+          <h2 id="kvkk-ne-gerektirir">KVKK proje yönetim yazılımı için ne gerektirir?</h2>
+          <p>KVKK, proje yönetim yazılımında işlenen kişisel veriler için hukuki dayanak, aydınlatma yükümlülüğü, veri güvenliği tedbirleri ve VERBİS kaydı gerektirir. Yazılım yurt dışında barındırılıyorsa ayrıca yurt dışına aktarım rejimi devreye girer: yeterlilik kararı yoksa standart sözleşme gibi bir uygun güvence sağlanmalıdır. Veriler Türkiye'de kalıyorsa aktarım kuralları uygulanmaz.</p>
+          <a class="qa-permalink" href="#kvkk-ne-gerektirir">Kalıcı bağlantı: /sorular#kvkk-ne-gerektirir</a>
+        </div>
+
+        <div class="qa-item">
+          <h2 id="acik-riza-yeterli-mi">KVKK'ya göre yurt dışına veri aktarımında açık rıza yeterli mi?</h2>
+          <p>1 Haziran 2024'te yürürlüğe giren değişiklikten sonra açık rıza, yurt dışına veri aktarımında yalnızca arızi aktarımlar için geçerli bir dayanaktır. Bir bulut yazılımının günlük kullanımı gibi süreklilik arz eden aktarımlarda açık rıza tek başına yeterli değildir; standart sözleşme veya bağlayıcı şirket kuralları gibi bir uygun güvence gerekir.</p>
+          <a class="qa-permalink" href="#acik-riza-yeterli-mi">Kalıcı bağlantı: /sorular#acik-riza-yeterli-mi</a>
+        </div>
+
+        <div class="qa-item">
+          <h2 id="standart-sozlesme-bildirim-suresi">Standart sözleşme KVKK'ya kaç gün içinde bildirilir?</h2>
+          <p>Yurt dışına veri aktarımında kullanılan standart sözleşme, imza tarihinden itibaren beş iş günü içinde Kişisel Verileri Koruma Kurumu'na bildirilmek zorundadır. Bildirim, Kurumun Standart Sözleşme Bildirim Modülü üzerinden, fiziksel olarak veya KEP ile yapılabilir. Bildirim yükümlülüğünün ihlali idari para cezasına tabidir.</p>
+          <a class="qa-permalink" href="#standart-sozlesme-bildirim-suresi">Kalıcı bağlantı: /sorular#standart-sozlesme-bildirim-suresi</a>
+        </div>
+
+        <div class="qa-item">
+          <h2 id="jira-veri-tasima">Jira'dan başka bir araca geçerken veriler nasıl taşınır?</h2>
+          <p>Jira'dan geçiş genellikle API üzerinden yapılır: hedef araçta Jira alan adı, e-posta ve API token girilir, taşınacak proje seçilir ve listeler, kartlar, son tarihler, öncelikler ile etiketler aktarılır. Çoğu göç aracında yorumlar, ek dosyalar ve kişi atamaları aktarılmaz; bunlar geçişten sonra manuel olarak yeniden kurulur.</p>
+          <a class="qa-permalink" href="#jira-veri-tasima">Kalıcı bağlantı: /sorular#jira-veri-tasima</a>
+        </div>
+
+        <div class="qa-item">
+          <h2 id="sistem-yoneticisi-sart-mi">Self-hosted yazılım için sistem yöneticisi şart mı?</h2>
+          <p>Şart değildir, ancak bir sorumlu belirlenmesi gerekir. Kurulum sihirbazıyla gelen modern self-hosted uygulamalar veritabanı dahil kurulumu otomatikleştirir ve Docker bilgisi gerektirmez. Buna karşılık sunucunun güncel tutulması, yedeklerin alınması ve erişim yetkilerinin yönetilmesi süreklidir; bu işleri üstlenecek en az bir kişi olmadan self-hosted model risklidir.</p>
+          <a class="qa-permalink" href="#sistem-yoneticisi-sart-mi">Kalıcı bağlantı: /sorular#sistem-yoneticisi-sart-mi</a>
+        </div>
+
+        <div class="qa-item">
+          <h2 id="self-hosted-guvenli-mi">Self-hosted yazılım bulut kadar güvenli mi?</h2>
+          <p>Güvenlik, modelden çok uygulamaya bağlıdır. Bulut sağlayıcıları profesyonel güvenlik ekipleri çalıştırır ancak veri paylaşılan bir altyapıda ve genellikle başka bir ülkededir. Self-hosted modelde saldırı yüzeyi daralır ve veri şirket ağında kalır, fakat yamalar, yedekler ve erişim yönetimi şirketin sorumluluğundadır. İhmal edilen bir self-hosted sunucu, bulut aboneliğinden daha risklidir.</p>
+          <a class="qa-permalink" href="#self-hosted-guvenli-mi">Kalıcı bağlantı: /sorular#self-hosted-guvenli-mi</a>
+        </div>
+
+        <div class="qa-item">
+          <h2 id="kanban-nedir">Kanban nedir?</h2>
+          <p>Kanban, işin görsel olarak yönetildiği bir akış yöntemidir. İşler kartlara yazılır, kartlar bir panoda "Yapılacak", "Devam Ediyor" ve "Tamamlandı" gibi kolonlar arasında ilerletilir. Temel kuralı, aynı anda devam eden iş sayısını sınırlamaktır (WIP limiti). Amaç, kapasiteyi aşmadan işin akış hızını artırmaktır.</p>
+          <a class="qa-permalink" href="#kanban-nedir">Kalıcı bağlantı: /sorular#kanban-nedir</a>
+        </div>
+
+        <div class="qa-item">
+          <h2 id="wip-limiti-nedir">WIP limiti nedir?</h2>
+          <p>WIP limiti (work in progress limit), bir kanban kolonunda aynı anda bulunabilecek maksimum kart sayısıdır. Limit dolduğunda yeni iş başlatılmaz, önce mevcut işler bitirilir. Amacı çoklu görev yükünü azaltmak ve darboğazları görünür kılmaktır. Yaygın başlangıç noktası, kolon başına kişi sayısının bir fazlasıdır.</p>
+          <a class="qa-permalink" href="#wip-limiti-nedir">Kalıcı bağlantı: /sorular#wip-limiti-nedir</a>
+        </div>
+
+        <div class="qa-item">
+          <h2 id="verileri-turkiyede-tutan-yazilim">Verileri Türkiye'de tutan proje yönetim yazılımı var mı?</h2>
+          <p>Evet. İki yol vardır: verileri Türkiye'deki veri merkezlerinde barındıran bulut hizmetleri veya şirketin kendi sunucusuna kurulan self-hosted yazılımlar. Self-hosted seçenekte veri hiç dışarı çıkmadığı için yurt dışına aktarım rejimi devreye girmez. Bulut seçeneğinde sağlayıcının alt yüklenicilerinin de Türkiye'de olduğunu sözleşmede doğrulamak gerekir.</p>
+          <a class="qa-permalink" href="#verileri-turkiyede-tutan-yazilim">Kalıcı bağlantı: /sorular#verileri-turkiyede-tutan-yazilim</a>
+        </div>
+
+        <div class="qa-item">
+          <h2 id="calio-nedir">Calio nedir?</h2>
+          <p>Calio, şirketlerin kendi sunucusunda çalışan bir proje yönetim platformudur. Kanban panoları, ekip sohbeti, sesli ve görüntülü arama, takvim, hatırlatıcılar, denetim kaydı ve rol tabanlı yetkilendirmeyi tek uygulamada toplar. Jira, Trello, Azure DevOps ve Notion'dan içe aktarım destekler. Arayüzü Türkçe ve İngilizcedir; Türkiye'de geliştirilmektedir.</p>
+          <a class="qa-permalink" href="#calio-nedir">Kalıcı bağlantı: /sorular#calio-nedir</a>
+        </div>
+
+        <div class="qa-item">
+          <h2 id="calio-ice-aktarim">Calio hangi araçlardan içe aktarım destekliyor?</h2>
+          <p>Calio, Jira, Trello, Azure DevOps ve Notion'dan içe aktarımı destekler. Listeler, kartlar, başlık ve açıklamalar, son tarihler, öncelikler, durumlar ve renkleriyle birlikte etiketler aktarılır. Bu sürümde yorumlar, ek dosyalar ve kişi atamaları aktarılmaz; tek içe aktarımda 500 kayda kadar taşınır.</p>
+          <a class="qa-permalink" href="#calio-ice-aktarim">Kalıcı bağlantı: /sorular#calio-ice-aktarim</a>
+        </div>
+
+        <div class="qa-item">
+          <h2 id="calio-acik-kaynak-mi">Calio açık kaynak mı?</h2>
+          <p>Hayır. Calio kapalı kaynaklı ticari bir üründür; kaynak kodu kamuya açık değildir. Buna karşılık yazılım müşterinin kendi sunucusunda çalışır ve veritabanı müşteride kalır. Bu nedenle veriler her zaman dışa aktarılabilir ve sağlayıcıya bağımlılık riski bulut aboneliklerine göre düşüktür.</p>
+          <a class="qa-permalink" href="#calio-acik-kaynak-mi">Kalıcı bağlantı: /sorular#calio-acik-kaynak-mi</a>
+        </div>
+      </div>
+
+      <div class="landing-cta">
+        <a href="/#demo" class="btn btn-primary btn-lg">Demo Talep Et →</a>
+        <a href="https://demo.calio.space" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">Canlı demoyu şimdi deneyin →</a>
+      </div>
+    </article>
+
+    <section class="related-pages" aria-label="İlgili sayfalar">
+      <h2>İlgili sayfalar</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/jira-alternatifi.html">Jira Alternatifi<span>Kendi sunucunuzda Türkçe Kanban</span></a>
+        <a class="related-card" href="/kvkk-uyumlu-proje-yonetimi.html">KVKK Uyumlu Proje Yönetimi<span>Veriyi hiç yurt dışına çıkarmadan</span></a>
+        <a class="related-card" href="/self-hosted-proje-yonetimi.html">Self-Hosted Proje Yönetimi<span>Kendi sunucunuza kurun</span></a>
+      </div>
+    </section>
+
+    <footer class="legal-foot">
+      <p>© 2026 Calio — <a href="/">ana sayfaya dön</a></p>
+    </footer>
+  </main>
+</body>
+</html>

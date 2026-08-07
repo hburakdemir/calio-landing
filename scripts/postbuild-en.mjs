@@ -76,8 +76,35 @@ if (existsSync(kvkkPath)) {
   writeFileSync(kvkkPath, kvkk);
 }
 
+// SEO landing/hub pages — canonical only, no hreflang/EN clone (same
+// treatment as kvkk.html, not the same treatment as index.html).
+const landingPages = [
+  'jira-alternatifi.html',
+  'kvkk-uyumlu-proje-yonetimi.html',
+  'self-hosted-proje-yonetimi.html',
+  'sorular.html'
+];
+for (const file of landingPages) {
+  const p = path.join(dist, file);
+  if (existsSync(p)) {
+    const html = readFileSync(p, 'utf8').replace(
+      '</head>',
+      `\n    <link rel="canonical" href="${SITE_URL}/${file}" />\n  </head>`
+    );
+    writeFileSync(p, html);
+  }
+}
+
 const today = new Date().toISOString().slice(0, 10);
-const urls = ['/', '/en/', '/kvkk.html'];
+const urls = [
+  '/',
+  '/en/',
+  '/kvkk.html',
+  '/jira-alternatifi.html',
+  '/kvkk-uyumlu-proje-yonetimi.html',
+  '/self-hosted-proje-yonetimi.html',
+  '/sorular.html'
+];
 writeFileSync(
   path.join(dist, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +

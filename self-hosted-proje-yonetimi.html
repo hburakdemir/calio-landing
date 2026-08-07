@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    try {
+      if (localStorage.getItem('calio_site_theme') === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    } catch (e) {}
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Self-Hosted Proje Yönetimi: Kendi Sunucunuza Kurun | Calio</title>
+  <meta name="description" content="Docker, npm veya manuel kurulumla 10 dakikada kendi sunucunuzda çalışan Kanban, sohbet, görüntülü arama ve takvim. SQLite, Windows ve Linux desteği." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Self-Hosted Proje Yönetimi: Kendi Sunucunuza Kurun | Calio" />
+  <meta property="og:description" content="Docker, npm veya manuel kurulumla 10 dakikada kendi sunucunuzda çalışan Kanban, sohbet, görüntülü arama ve takvim. SQLite, Windows ve Linux desteği." />
+  <meta property="og:image" content="https://calio.space/og.jpg" />
+  <meta property="og:url" content="https://calio.space/self-hosted-proje-yonetimi.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script type="module" src="/src/landing.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://calio.space/" },
+      { "@type": "ListItem", "position": 2, "name": "Self-Hosted Proje Yönetimi", "item": "https://calio.space/self-hosted-proje-yonetimi.html" }
+    ]
+  }
+  </script>
+</head>
+<body class="legal-body landing-body">
+  <main class="legal-page landing-page">
+    <header class="legal-head landing-head">
+      <a href="/" class="nav-brand" aria-label="Calio ana sayfa">
+        <svg viewBox="0 0 34 34" width="28" height="28" role="img" aria-label="Calio">
+          <rect width="34" height="34" rx="8" fill="#0F766E"/>
+          <path d="M24 11A10 10 0 1 0 24 23" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M24 23l5 5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="nav-wordmark">Calio</span>
+      </a>
+      <div class="landing-head-actions">
+        <a class="legal-back" href="/">← Siteye dön</a>
+        <a href="https://demo.calio.space" class="btn btn-ghost" target="_blank" rel="noopener">Demoyu Dene</a>
+        <a href="/#demo" class="btn btn-primary">Demo Talep Et</a>
+      </div>
+    </header>
+
+    <article class="legal-doc landing-doc">
+      <h1>Self-hosted proje yönetimi: verileriniz sizin sunucunuzda kalır</h1>
+      <p class="legal-updated">Yayın tarihi: 7 Ağustos 2026</p>
+
+      <p>Self-hosted proje yönetimi, yazılımın ve veritabanının bir sağlayıcının bulutunda değil, şirketin kendi sunucusunda çalıştırılmasıdır. Görev kartları, dosyalar ve kullanıcı hesapları o sunucuda kalır; erişim yönetimi, yedekleme ve güncelleme sorumluluğu şirkete geçer. Bulut aboneliğinden temel farkı, verinin şirket altyapısından hiç çıkmamasıdır.</p>
+
+      <h2>Self-hosted ne demek, on-premise ile farkı var mı?</h2>
+      <p>"On-premise" ve "self-hosted" günlük kullanımda genelde aynı anlamda geçer, ama aralarında küçük bir fark var. On-premise, yazılımın şirketin kendi fiziksel binasındaki donanımda çalıştığını vurgular. Self-hosted ise daha geniş bir kategoridir — sunucu, kiralanmış bir veri merkezinde (colocation) veya bir bulut sağlayıcısından kiralanan çıplak bir sunucuda da olabilir. Belirleyici olan binanın kime ait olduğu değil, <strong>sunucunun ve veritabanının kimin kontrolünde çalıştığıdır.</strong></p>
+      <p>Calio bu ayrımda ikisini de destekler: aynı kurulum sihirbazıyla ister ofisinizdeki bir bilgisayara, ister kiraladığınız bir Linux sunucuya kurabilirsiniz. Her iki durumda da uygulama ve veritabanı sizin belirlediğiniz makinede çalışır; Calio'nun kendi altyapısına hiçbir veri gitmez.</p>
+
+      <h2>Kimler kendi sunucusunda çalıştırmak zorunda?</h2>
+      <p>Kanunen kimse "self-hosted araç kullanın" diye zorlanmıyor — KVKK bir teknoloji seçimini değil, kişisel verinin nasıl işlendiğini düzenliyor. Ama bazı ekipler için pratikte seçenek daralıyor:</p>
+      <ul>
+        <li><strong>Sağlık kuruluşları, hukuk büroları, sigorta ve finansal aracılık şirketleri, muhasebe/YMM ofisleri, kamu tedarikçileri ve savunma yan sanayii</strong> — müşteri veya hasta verisi taşıyan kartların yurt dışına çıkması, 2024 KVKK değişikliğinden sonra ek sözleşme ve bildirim yükü doğuruyor. (Ayrıntı: <a href="/kvkk-uyumlu-proje-yonetimi.html">KVKK Uyumlu Proje Yönetimi</a>)</li>
+        <li><strong>Kapalı ağda (intranet) çalışan, internete sürekli çıkmayan saha veya üretim ekipleri.</strong></li>
+        <li><strong>Sözleşmesinde "veri yurt dışına çıkamaz" maddesi bulunan kamu ihaleleri ve kurumsal tedarikçiler.</strong></li>
+      </ul>
+      <p>Bunların dışındaki ekipler için self-hosting bir zorunluluk değil, bir tercihtir: veri kontrolü, öngörülebilir maliyet ya da mevcut sunucu altyapısını değerlendirme isteği. Küçük bir ekip için bulut hâlâ daha az sürtünmeli bir başlangıç olabilir — bunu dürüstçe söylüyoruz.</p>
+
+      <h2>Üç kurulum yolu: Docker, taşınabilir paket, masaüstü</h2>
+      <p>Calio Server'ı kendi sunucunuza kurmanın üç yolu var:</p>
+      <ul>
+        <li><strong>Docker Compose:</strong> tek komutla ayağa kalkar; resmî imaj hem uygulamayı hem SQLite veritabanını içerir.</li>
+        <li><strong>Taşınabilir paket:</strong> Docker gerektirmeyen, indirip çalıştırdığınız bir kurulum sihirbazı; Windows ve Linux için ayrı paketler halinde dağıtılır.</li>
+        <li><strong>Masaüstü istemcisi:</strong> ekibinizin bağlanacağı Windows/macOS uygulaması. Bu, sunucunun kendisi değildir — sunucu tarafı yine Docker veya taşınabilir paketle kurulur; masaüstü istemcisi ona bağlanan bir istemci.</li>
+      </ul>
+      <p>Üçünde de ilk açılışta bir kurulum sihirbazı karşınıza çıkar ve veritabanını, ortam değişkenlerini ve gerekli sertifikaları sizin için otomatik oluşturur — elle yapılandırma dosyası düzenlemeniz gerekmez.</p>
+
+      <h2>Donanım gereksinimi: SQLite ile ayrı veritabanı sunucusu gerekmez</h2>
+      <p>Calio'nun veritabanı SQLite'tır — ayrı bir PostgreSQL veya MySQL sunucusu kurmanıza ya da yönetmenize gerek yoktur; veritabanı, uygulamayla aynı sunucuda tek bir dosya olarak çalışır. Bu, kurulumu ve yedeklemeyi basitleştirir: yedek almak, tek bir dosyayı güvenli bir yere kopyalamaktan ibarettir.</p>
+      <p>Sunucu tarafında ihtiyacınız olan, sürekli açık kalabilen bir Windows bilgisayar ya da küçük bir Linux sunucudur — Windows Server sürümü ya da özel bir DevOps ekibi şart değildir. Ekip büyüdükçe donanım ihtiyacı da büyür; kesin bir CPU/RAM rakamı burada iddia etmek yerine, ekip büyüklüğünüze göre gerçek bir öneriyi demo görüşmesinde birlikte netleştiriyoruz.</p>
+
+      <h2>Self-hosted araçlar arasında Calio nerede duruyor?</h2>
+      <p>Kendi sunucusuna kurulabilen proje yönetim araçları arasında en çok karşılaştırılanlardan dördü — Calio, Plane, OpenProject ve Bitrix24 — aşağıda, kaynaklı verilerle:</p>
+      <div class="table-scroll">
+        <table class="cmp-table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="is-calio">Calio</th>
+              <th scope="col">Plane</th>
+              <th scope="col">OpenProject</th>
+              <th scope="col">Bitrix24</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Lisans / fiyat</th>
+              <td class="is-calio">TL, kişi başı değil <em>(fiyat yakında açıklanacak)</em></td>
+              <td>Koltuk başına, USD <em>(Community sürümü ücretsiz)</em></td>
+              <td>Community ücretsiz; Enterprise kullanıcı başına EUR, min. 25 kullanıcı (<a href="https://www.openproject.org/pricing/" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
+              <td>Şirket başına paket, USD (<a href="https://www.bitrix24.com.tr/prices/" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
+            </tr>
+            <tr>
+              <th scope="row">Kurulum yöntemi</th>
+              <td class="is-calio">Docker, taşınabilir paket veya kurulum sihirbazı — Docker zorunlu değil</td>
+              <td>Docker / Kubernetes</td>
+              <td>Docker veya paket kurulumu</td>
+              <td>Sunucu yığını kurulumu (on-prem)</td>
+            </tr>
+            <tr>
+              <th scope="row">Türkçe arayüz</th>
+              <td class="is-calio">Evet, yerleşik</td>
+              <td>Topluluk katkısıyla eklendi (<a href="https://github.com/makeplane/plane/pull/6874" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
+              <td>Topluluk çevirisi (CrowdIn)</td>
+              <td>Evet, yerleşik</td>
+            </tr>
+            <tr>
+              <th scope="row">Dahili sohbet</th>
+              <td class="is-calio">Evet</td>
+              <td>Hayır</td>
+              <td>Hayır</td>
+              <td>Evet</td>
+            </tr>
+            <tr>
+              <th scope="row">Görüntülü arama</th>
+              <td class="is-calio">Evet (WebRTC)</td>
+              <td>Hayır</td>
+              <td>Hayır</td>
+              <td>Evet</td>
+            </tr>
+            <tr>
+              <th scope="row">Denetim kaydı</th>
+              <td class="is-calio">Evet</td>
+              <td>Doğrulanmadı</td>
+              <td>Evet</td>
+              <td>Evet</td>
+            </tr>
+            <tr>
+              <th scope="row">Jira'dan içe aktarım</th>
+              <td class="is-calio">Evet, tek tık (API anahtarıyla)</td>
+              <td>Evet (<a href="https://docs.plane.so/importers/jira" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
+              <td>Beta; yalnızca Jira Server/Data Center 10.x–11.x (<a href="https://www.openproject.org/jira-migrator/" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
+              <td>Doğrulanmadı</td>
+            </tr>
+            <tr>
+              <th scope="row">Bakım / güncelleme yükü</th>
+              <td class="is-calio">Masaüstü istemci otomatik güncellenir; sunucu güncellemesi tek tıkla kurulur</td>
+              <td>Sunucu bakımı size ait (genel self-hosted kural)</td>
+              <td>Sunucu bakımı size ait (genel self-hosted kural)</td>
+              <td>Sunucu bakımı size ait (genel self-hosted kural)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Rakip bilgileri ilgili şirketlerin kendi kamuya açık sayfalarından 30 Temmuz 2026'da alınmıştır ve her satır kaynaklıdır.</p>
+      <div class="callout">
+        <p><strong>Neden yalnızca dört araç?</strong> Taiga, Wekan ve Nextcloud da self-hosted kurulabilen tanınmış araçlar, ama bu tablo yalnızca elimizde kaynaklı, tarihli veri bulunan araçları listeliyor. Bu üçü için doğrulanmış özellik verisi bu yazı kapsamında derlenmedi; icat edip tabloya eklemek yerine dışarıda bıraktık.</p>
+      </div>
+
+      <h2>Bulut mu kendi sunucu mu — dürüst karşılaştırma tablosu</h2>
+      <div class="table-scroll">
+        <table class="cmp-table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Kendi sunucunuz (self-hosted)</th>
+              <th scope="col">Bulut (SaaS)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Veri konumu</th><td>Sizin belirlediğiniz sunucuda</td><td>Sağlayıcının veri merkezinde</td></tr>
+            <tr><th scope="row">Başlangıç kurulumu</th><td>Sunucu temin edip kurulum sihirbazını çalıştırmanız gerekir</td><td>Hesap açıp doğrudan kullanmaya başlarsınız</td></tr>
+            <tr><th scope="row">Gider modeli</th><td>Sunucu maliyeti + lisans; kişi sayısı arttıkça birebir katlanmaz</td><td>Genellikle kişi başına aylık abonelik</td></tr>
+            <tr><th scope="row">Bakım sorumluluğu</th><td>Güncelleme, yedekleme ve erişim yönetimi sizde</td><td>Sağlayıcıda</td></tr>
+            <tr><th scope="row">İnternet bağımlılığı</th><td>Yerel ağda, internetsiz de çalışabilir</td><td>İnternet kesilirse erişilemez</td></tr>
+            <tr><th scope="row">Ölçeklenme</th><td>Donanımınızı siz büyütürsünüz</td><td>Sağlayıcı otomatik ölçekler</td></tr>
+            <tr><th scope="row">Güvenlik sorumluluğu</th><td>Sunucu erişimi ve yamalar size ait</td><td>Sağlayıcının güvenlik ekibine ait</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Bakım, yedekleme ve güncelleme kimin işi?</h2>
+      <p>Self-hosted modelde üç sorumluluk şirkete geçer: güncelleme, yedekleme, erişim yönetimi.</p>
+      <p><strong>Güncelleme:</strong> Calio'nun masaüstü istemcisi kendini otomatik günceller; sunucu tarafı güncellemeleri tek tıkla kurulur, elle dosya kopyalamanız gerekmez.</p>
+      <p><strong>Yedekleme:</strong> veritabanı tek bir SQLite dosyası olduğu için yedekleme, o dosyayı düzenli aralıklarla güvenli bir yere kopyalamaktan ibarettir. Sıklık ve saklama süresi sizin politikanıza bağlıdır.</p>
+      <p><strong>Erişim yönetimi:</strong> sunucuya kimin fiziksel ya da ağ üzerinden erişebileceğini siz belirlersiniz; havuz ve proje düzeyinde kullanıcı yetkilerini Calio içinden yönetirsiniz.</p>
+      <p>Bunların hiçbiri karmaşık bir DevOps ekibi gerektirmez, ama en az bir sorumlu kişi olmadan da yürümez — bu self-hosting'in doğasıdır, gizlemiyoruz.</p>
+
+      <h2>Sık sorulanlar</h2>
+
+      <h3>Self-hosted yazılım için sistem yöneticisi şart mı?</h3>
+      <p>Şart değildir, ancak bir sorumlu belirlenmesi gerekir. Kurulum sihirbazıyla gelen modern self-hosted uygulamalar veritabanı dahil kurulumu otomatikleştirir ve Docker bilgisi gerektirmez. Buna karşılık sunucunun güncel tutulması, yedeklerin alınması ve erişim yetkilerinin yönetilmesi süreklidir.</p>
+
+      <h3>Self-hosted yazılım bulut kadar güvenli mi?</h3>
+      <p>Güvenlik modelden çok uygulamaya bağlıdır. Bulut sağlayıcıları profesyonel güvenlik ekipleri çalıştırır ama veri paylaşılan bir altyapıda ve genellikle başka bir ülkededir. Self-hosted modelde saldırı yüzeyi daralır ve veri şirket ağında kalır, fakat yamalar, yedekler ve erişim yönetimi şirketin sorumluluğundadır.</p>
+
+      <h3>Açık kaynak ücretsiz, neden ödeyeyim?</h3>
+      <p>Açık kaynak araçlarda lisans bedeli olmayabilir, ama kurulum, güncelleme, hata giderme ve destek işini siz ya da ekibiniz üstlenir. Ticari bir self-hosted üründe bu işlerin bir kısmı (kurulum sihirbazı, güncelleme mekanizması, Türkçe destek) ürünün fiyatına dahildir — hangisinin ekibiniz için daha ucuza geleceği, kendi zamanınızın maliyetine bağlıdır.</p>
+
+      <p>Daha fazla soru ve cevap için: <a href="/sorular.html">Sorular ve Cevaplar</a> sayfamıza bakabilirsiniz.</p>
+
+      <h2>Sıradaki adım</h2>
+      <p>Kurulum sihirbazının gerçekte nasıl çalıştığını anlatmak yerine göstermeyi tercih ediyoruz. 30 dakikalık bir demoda kurulumu, panoyu ve veritabanı yedeğini canlı görün.</p>
+      <p><strong>Lansman kampanyası:</strong> demo talep eden ilk 5 şirket Calio'yu 6 ay boyunca ücretsiz kullanıyor.</p>
+
+      <div class="landing-cta">
+        <a href="/#demo" class="btn btn-primary btn-lg">Demo Talep Et →</a>
+        <a href="https://demo.calio.space" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">Canlı demoyu şimdi deneyin →</a>
+      </div>
+    </article>
+
+    <section class="related-pages" aria-label="İlgili sayfalar">
+      <h2>İlgili sayfalar</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/jira-alternatifi.html">Jira Alternatifi<span>Kendi sunucunuzda Türkçe Kanban</span></a>
+        <a class="related-card" href="/kvkk-uyumlu-proje-yonetimi.html">KVKK Uyumlu Proje Yönetimi<span>Veriyi hiç yurt dışına çıkarmadan</span></a>
+        <a class="related-card" href="/sorular.html">Sorular ve Cevaplar<span>Self-hosted, KVKK, Kanban SSS</span></a>
+      </div>
+    </section>
+
+    <footer class="legal-foot">
+      <p>© 2026 Calio — <a href="/">ana sayfaya dön</a></p>
+    </footer>
+  </main>
+</body>
+</html>
