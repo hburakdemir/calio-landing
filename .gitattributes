@@ -1,12 +1,3 @@
 # Long-form content pages, not application code — excluded from GitHub's
 # language stats so the bar reflects the actual JS/CSS build, not prose.
-jira-alternatifi.html linguist-documentation
-kvkk-uyumlu-proje-yonetimi.html linguist-documentation
-self-hosted-proje-yonetimi.html linguist-documentation
-sorular.html linguist-documentation
-kvkk.html linguist-documentation
-trello-alternatifi.html linguist-documentation
-azure-devops-alternatifi.html linguist-documentation
-notion-alternatifi.html linguist-documentation
-asana-karsilastirma.html linguist-documentation
-en-iyi-kanban-araclari.html linguist-documentation
+sayfalar/*.html linguist-documentation

@@ -4,12 +4,24 @@
 //  3. absolute og:url / og:image
 //  4. dist/sitemap.xml + dist/robots.txt
 // Runs automatically via `npm run build`.
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, renameSync, rmdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const root = path.dirname(fileURLToPath(new URL('.', import.meta.url)));
 const dist = path.join(root, 'dist');
+
+// Source pages live under sayfalar/ (repo tidiness) but must be served at
+// the flat site root — URLs already indexed/submitted to Google must not
+// change. Vite mirrors source path into dist/, so flatten it back here
+// before any of the canonical/sitemap logic below runs.
+const distSayfalar = path.join(dist, 'sayfalar');
+if (existsSync(distSayfalar)) {
+  for (const file of readdirSync(distSayfalar)) {
+    renameSync(path.join(distSayfalar, file), path.join(dist, file));
+  }
+  rmdirSync(distSayfalar);
+}
 
 const { SITE_URL } = await import(new URL('../src/config.js', import.meta.url));
 const en = (await import(new URL('../src/i18n/en.js', import.meta.url))).default;
@@ -77,7 +89,9 @@ if (existsSync(kvkkPath)) {
 }
 
 // SEO landing/hub pages — canonical only, no hreflang/EN clone (same
-// treatment as kvkk.html, not the same treatment as index.html).
+// treatment as kvkk.html, not the same treatment as index.html). Source
+// files live in sayfalar/ but are flattened to the site root above, so
+// URLs stay exactly what's already indexed/submitted to Google.
 const landingPages = [
   'jira-alternatifi.html',
   'kvkk-uyumlu-proje-yonetimi.html',
