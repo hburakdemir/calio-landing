@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    try {
+      if (localStorage.getItem('calio_site_theme') === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    } catch (e) {}
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azure DevOps / TFS Alternatifi: Türkçe, Kendi Sunucunuzda | Calio</title>
+  <meta name="description" content="Azure DevOps ve TFS'ten tek tıkla taşının. Calio kendi sunucunuzda çalışır, arayüz Türkçe, kurulum Docker gerektirmez — kurumsal karmaşıklık olmadan kanban." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Azure DevOps / TFS Alternatifi: Türkçe, Kendi Sunucunuzda | Calio" />
+  <meta property="og:description" content="Azure DevOps ve TFS'ten tek tıkla taşının. Calio kendi sunucunuzda çalışır, arayüz Türkçe, kurulum Docker gerektirmez — kurumsal karmaşıklık olmadan kanban." />
+  <meta property="og:image" content="https://calio.space/og.jpg" />
+  <meta property="og:url" content="https://calio.space/azure-devops-alternatifi.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script type="module" src="/src/landing.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://calio.space/" },
+      { "@type": "ListItem", "position": 2, "name": "Azure DevOps / TFS Alternatifi", "item": "https://calio.space/azure-devops-alternatifi.html" }
+    ]
+  }
+  </script>
+</head>
+<body class="legal-body landing-body">
+  <main class="legal-page landing-page">
+    <header class="legal-head landing-head">
+      <a href="/" class="nav-brand" aria-label="Calio ana sayfa">
+        <svg viewBox="0 0 34 34" width="28" height="28" role="img" aria-label="Calio">
+          <rect width="34" height="34" rx="8" fill="#0F766E"/>
+          <path d="M24 11A10 10 0 1 0 24 23" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M24 23l5 5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="nav-wordmark">Calio</span>
+      </a>
+      <div class="landing-head-actions">
+        <a class="legal-back" href="/">← Siteye dön</a>
+        <a href="https://demo.calio.space" class="btn btn-ghost" target="_blank" rel="noopener">Demoyu Dene</a>
+        <a href="/#demo" class="btn btn-primary">Demo Talep Et</a>
+      </div>
+    </header>
+
+    <article class="legal-doc landing-doc">
+      <h1>Azure DevOps ve TFS Alternatifi: Basit, Türkçe, Kendi Sunucunuzda</h1>
+      <p class="legal-updated">Yayın tarihi: 7 Ağustos 2026</p>
+
+      <p>Azure DevOps (Boards, Repos, Pipelines, Test Plans, Artifacts), Microsoft ekosistemi etrafında geliştirme yapan büyük ekipler için tasarlanmış kapsamlı bir DevOps paketi. Kanban/görev takibi bu paketin yalnızca bir parçası — geri kalanı sürüm kontrolü, CI/CD ve test yönetimi. Sadece ekip görev takibi ve iletişimi arayan bir KOBİ için bu kapsam çoğu zaman gereğinden fazla.</p>
+
+      <h2>TFS kullanıyorsanız</h2>
+      <p>Team Foundation Server (TFS), Microsoft tarafından 2019'da <strong>Azure DevOps Server</strong> olarak yeniden markalandı — aynı ürün ailesinin kendi sunucunuza kurulan sürümü. Kaynak: <a href="https://learn.microsoft.com/en-us/azure/devops/server/tfs-is-now-azure-devops-server?view=azure-devops" target="_blank" rel="noopener nofollow">Microsoft Learn — "TFS rebrand to Azure DevOps Server"</a>. Şirketinizde hâlâ "TFS" adıyla anılan bir kurulum çalışıyorsa, muhtemelen bu ürün ailesinin daha eski bir sürümüdür. Bu sayfadaki karşılaştırma ve taşıma bilgileri hem Azure DevOps (bulut) hem Azure DevOps Server / TFS (kendi sunucunuz) için geçerlidir.</p>
+
+      <h2>Neden Azure DevOps / TFS'ten çıkılıyor?</h2>
+
+      <p><strong>1. Kurumsal karmaşıklık.</strong> İş öğesi tipleri, süreç şablonları (Agile/Scrum/CMMI), sprint/backlog/board hiyerarşisi ve alan (area) / iterasyon yapılandırması — büyük yazılım organizasyonlarının ihtiyacı için tasarlanmış. 10-30 kişilik bir ekip için bu yapılandırma yükü, panoyu kurup çalışmaya başlamaktan daha uzun sürebilir.</p>
+
+      <p><strong>2. Microsoft ekosistemine kilitlenme.</strong> Kimlik doğrulama tipik olarak Microsoft Entra ID (eski adıyla Azure AD) üzerinden yürür, lisanslama Visual Studio abonelikleriyle iç içe geçmiştir ve derin entegrasyonların çoğu .NET/Azure merkezlidir. Farklı bir yığın kullanan ya da yalnızca görev takibi arayan bir ekip için bu, gerekmeyen bir bağımlılık katmanı.</p>
+
+      <p><strong>3. Lisans modeli tek başına karmaşık.</strong> Bulut tarafında (Azure DevOps Services) Basic plan ilk 5 kullanıcı ücretsiz, sonrası kullanıcı başına 6 USD/ay; test yönetimi eklendiğinde kullanıcı başına 52 USD/ay'a çıkıyor. Kaynak: <a href="https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/" target="_blank" rel="noopener nofollow">azure.microsoft.com — Azure DevOps Services Pricing</a>, 7 Ağustos 2026. Kendi sunucunuza kurduğunuz sürümde (Azure DevOps Server) ise ayrıca bir sunucu lisansı + kullanıcı başına CAL (client access license) gerekiyor; Visual Studio abonelik yoluyla alınırsa Professional için kullanıcı başına 45 USD/ay, Enterprise için 250 USD/ay'a kadar çıkabiliyor — üstüne Windows/Windows Server lisansı ayrıca gerekiyor. Kaynak: <a href="https://azure.microsoft.com/en-us/pricing/details/devops/server/" target="_blank" rel="noopener nofollow">azure.microsoft.com — Azure DevOps Server Pricing</a>, 7 Ağustos 2026.</p>
+
+      <h2>Karşılaştırma</h2>
+      <div class="table-scroll">
+        <table class="cmp-table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="is-calio">Calio</th>
+              <th scope="col">Azure DevOps Services</th>
+              <th scope="col">Azure DevOps Server (TFS)</th>
+              <th scope="col">Bitrix24</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Barındırma</th>
+              <td class="is-calio">Kendi sunucunuz</td>
+              <td>Microsoft bulutu</td>
+              <td>Kendi sunucunuz (sunucu lisansı + CAL gerekir)</td>
+              <td>Bulut veya kendi sunucunuz</td>
+            </tr>
+            <tr>
+              <th scope="row">Fiyat modeli</th>
+              <td class="is-calio">TL, kişi başı değil <em>(fiyat yakında açıklanacak)</em></td>
+              <td>Kullanıcı başına USD — ilk 5 kullanıcı ücretsiz, sonrası $6/kullanıcı/ay Basic (<a href="https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
+              <td>Sunucu lisansı + kullanıcı başına CAL, veya Visual Studio abonelik yoluyla $45–$250/kullanıcı/ay (<a href="https://azure.microsoft.com/en-us/pricing/details/devops/server/" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
+              <td>Şirket başına paket, USD (<a href="https://www.bitrix24.com.tr/prices/" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
+            </tr>
+            <tr>
+              <th scope="row">Türkçe arayüz</th>
+              <td class="is-calio">Evet, yerleşik</td>
+              <td>Doğrulanamadı — resmî desteklenen dil listesi bu araştırmada teyit edilemedi</td>
+              <td>Doğrulanamadı</td>
+              <td>Evet, yerleşik</td>
+            </tr>
+            <tr>
+              <th scope="row">Dahili ekip sohbeti</th>
+              <td class="is-calio">Evet</td>
+              <td>Hayır (Teams entegrasyonu)</td>
+              <td>Hayır</td>
+              <td>Evet</td>
+            </tr>
+            <tr>
+              <th scope="row">Dahili sesli/görüntülü arama</th>
+              <td class="is-calio">Evet (WebRTC)</td>
+              <td>Hayır</td>
+              <td>Hayır</td>
+              <td>Evet</td>
+            </tr>
+            <tr>
+              <th scope="row">Denetim kaydı</th>
+              <td class="is-calio">Evet</td>
+              <td>Doğrulanamadı</td>
+              <td>Doğrulanamadı</td>
+              <td>Evet</td>
+            </tr>
+            <tr>
+              <th scope="row">Azure DevOps/TFS'ten içe aktarım</th>
+              <td class="is-calio">Evet, tek tık (API anahtarıyla)</td>
+              <td>—</td>
+              <td>—</td>
+              <td>Doğrulanmadı</td>
+            </tr>
+            <tr>
+              <th scope="row">Kurulum</th>
+              <td class="is-calio">Windows kurulum sihirbazı, Docker gerekmez</td>
+              <td>Kurulum yok (bulut)</td>
+              <td>Windows Server + SQL Server kurulumu, CAL yönetimi</td>
+              <td>Sunucu yığını kurulumu (on-prem)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Rakip bilgileri, ilgili şirketlerin kendi kamuya açık sayfalarından 30 Temmuz – 7 Ağustos 2026 arasında alınmıştır ve her satır kaynaklıdır. Bir hata gördüğünüzü düşünüyorsanız yazın, 48 saat içinde düzeltiriz.</p>
+
+      <h2>Azure DevOps / TFS'ten Calio'ya taşıma</h2>
+      <p>Azure DevOps API anahtarınızı girip projenizi seçiyorsunuz. Aktarılanlar:</p>
+      <ul>
+        <li>Board'lar ve kolon düzeni</li>
+        <li>İş öğeleri (work item) — başlık ve açıklamalarıyla, kart olarak</li>
+        <li>Son tarihler</li>
+        <li>Öncelikler</li>
+        <li>Durumlar (Yapılacak · Devam Ediyor · Tamamlandı eşlemesiyle)</li>
+        <li>Etiketler, renkleriyle birlikte</li>
+      </ul>
+      <p><strong>Aktarılmayanlar — bunu baştan söylüyoruz:</strong> yorumlar, ek dosyalar ve kişi atamaları bu sürümde taşınmıyor; iş öğesi tipleri ve süreç şablonu özel alanları (custom field) aktarılmıyor. Atamaları içe aktarımdan sonra ekibinizle dakikalar içinde yapıyorsunuz. Tek içe aktarımda 500 kayda kadar taşınır.</p>
+
+      <h2>Sık gelen üç itiraz</h2>
+
+      <h3>"Pipeline'larımız (CI/CD) Azure DevOps'a bağlı."</h3>
+      <p>Doğru olabilir — Calio bir CI/CD aracı değil, kanban ve ekip iletişimi aracı. Pipeline/Repos/Artifacts kullanmaya devam edip yalnızca görev takibi ve iletişimi Calio'ya taşıyan ekipler var; bunu demo görüşmesinde konuşalım.</p>
+
+      <h3>"Zaten Visual Studio/Microsoft 365 lisansımız var."</h3>
+      <p>Anlaşılır — mevcut lisans zaten ödendiyse geçişin maliyet gerekçesi zayıflar. Ama ekibinizin bir kısmı yalnızca görev takibi için Azure DevOps'un iş öğesi karmaşıklığıyla uğraşıyorsa, daha sade bir kanban katmanı yine de zaman kazandırabilir.</p>
+
+      <h3>"Ekibim yeni araca alışamaz."</h3>
+      <p>Calio bilinen kanban düzenini kullanıyor: liste, kart, sürükle-bırak — Azure DevOps'un Boards görünümünden çok daha az yapılandırma gerektirir. Arayüz Türkçe ve İngilizce. Deneyin: <a href="https://demo.calio.space" target="_blank" rel="noopener">demo.calio.space</a></p>
+
+      <h2>Calio kimin için doğru değil?</h2>
+      <p>Dürüst olalım:</p>
+      <ul>
+        <li><strong>Büyük, Microsoft-stack kurumsal ekiplersiniz</strong> — Visual Studio Enterprise lisanslarınız zaten var, .NET pipeline'larınız Azure'a bağlı, gelişmiş test yönetimi (Test Plans) veya derin CI/CD entegrasyonu gerekiyorsa Azure DevOps bugün hâlâ mantıklı bir seçim olabilir.</li>
+        <li><strong>Sürüm kontrolü ve build/release otomasyonunu da tek üründe istiyorsanız</strong>, Calio bunları sunmuyor — yalnızca kanban ve ekip iletişimi kapsıyor.</li>
+        <li><strong>200 kişilik bir organizasyonsanız</strong> ya da karmaşık iş öğesi hiyerarşisine (epic → feature → story → task) bağımlıysanız, Calio bugün için doğru seçim olmayabilir.</li>
+      </ul>
+      <p>Bunları demo görüşmesinde konuşuyoruz. Size uymuyorsa bunu söylemek, satmaya çalışmaktan daha iyi.</p>
+
+      <h2>Sıradaki adım</h2>
+      <p>Azure DevOps ya da TFS panonuzu 30 dakikalık bir demoda <strong>canlı aktaralım.</strong> Satış baskısı yok; kendi kullanım senaryonuz üzerinden ilerliyoruz.</p>
+      <p><strong>Lansman kampanyası:</strong> demo talep eden ilk 5 şirket Calio'yu 6 ay boyunca ücretsiz kullanıyor.</p>
+
+      <div class="landing-cta">
+        <a href="/#demo" class="btn btn-primary btn-lg">Demo Talep Et →</a>
+        <a href="https://demo.calio.space" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">Canlı demoyu şimdi deneyin →</a>
+      </div>
+    </article>
+
+    <section class="related-pages" aria-label="İlgili sayfalar">
+      <h2>İlgili sayfalar</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/jira-alternatifi.html">Jira Alternatifi<span>Kendi sunucunuzda Türkçe Kanban</span></a>
+        <a class="related-card" href="/self-hosted-proje-yonetimi.html">Self-Hosted Proje Yönetimi<span>Kendi sunucunuza kurun</span></a>
+        <a class="related-card" href="/en-iyi-kanban-araclari.html">En İyi Kanban Araçları<span>2026 karşılaştırması</span></a>
+        <a class="related-card" href="/sorular.html">Sorular ve Cevaplar<span>Self-hosted, KVKK, Kanban SSS</span></a>
+      </div>
+    </section>
+
+    <footer class="legal-foot">
+      <p>© 2026 Calio — <a href="/">ana sayfaya dön</a></p>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    try {
+      if (localStorage.getItem('calio_site_theme') === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    } catch (e) {}
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trello Alternatifi: Kendi Sunucunuzda Türkçe Kanban | Calio</title>
+  <meta name="description" content="Trello panolarınızı tek tıkla Calio'ya taşıyın. Listeler, kartlar, etiketler ve son tarihler aktarılır; kendi sunucunuzda çalışır, arayüz Türkçe, fiyat TL." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Trello Alternatifi: Kendi Sunucunuzda Türkçe Kanban | Calio" />
+  <meta property="og:description" content="Trello panolarınızı tek tıkla Calio'ya taşıyın. Listeler, kartlar, etiketler ve son tarihler aktarılır; kendi sunucunuzda çalışır, arayüz Türkçe, fiyat TL." />
+  <meta property="og:image" content="https://calio.space/og.jpg" />
+  <meta property="og:url" content="https://calio.space/trello-alternatifi.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script type="module" src="/src/landing.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://calio.space/" },
+      { "@type": "ListItem", "position": 2, "name": "Trello Alternatifi", "item": "https://calio.space/trello-alternatifi.html" }
+    ]
+  }
+  </script>
+</head>
+<body class="legal-body landing-body">
+  <main class="legal-page landing-page">
+    <header class="legal-head landing-head">
+      <a href="/" class="nav-brand" aria-label="Calio ana sayfa">
+        <svg viewBox="0 0 34 34" width="28" height="28" role="img" aria-label="Calio">
+          <rect width="34" height="34" rx="8" fill="#0F766E"/>
+          <path d="M24 11A10 10 0 1 0 24 23" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M24 23l5 5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="nav-wordmark">Calio</span>
+      </a>
+      <div class="landing-head-actions">
+        <a class="legal-back" href="/">← Siteye dön</a>
+        <a href="https://demo.calio.space" class="btn btn-ghost" target="_blank" rel="noopener">Demoyu Dene</a>
+        <a href="/#demo" class="btn btn-primary">Demo Talep Et</a>
+      </div>
+    </header>
+
+    <article class="legal-doc landing-doc">
+      <h1>Trello Alternatifi: Panolarınızı Tek Tıkla Taşıyın</h1>
+      <p class="legal-updated">Yayın tarihi: 7 Ağustos 2026</p>
+
+      <p>Trello, sürükle-bırak basitliğiyle milyonlarca ekibin ilk kanban aracı. Ama ekip büyüdükçe, otomasyon ihtiyacı arttıkça ya da veri konumu bir uyum sorusu haline geldikçe aynı ekipler bir alternatif aramaya başlıyor.</p>
+
+      <h2>Trello'dan neden çıkılıyor?</h2>
+
+      <p><strong>1. Ücretsiz plan hızla yetersiz kalıyor.</strong> Trello Free, iş alanı (workspace) başına 10 işbirlikçiyle sınırlı. Ekip bu sınırı aştığında Standard ($5/kullanıcı/ay) ya da Premium ($10/kullanıcı/ay, yıllık faturalı; aylık faturada $12,50) planına geçmek gerekiyor. Kaynak: <a href="https://trello.com/pricing" target="_blank" rel="noopener nofollow">trello.com/pricing</a>, 30 Temmuz 2026.</p>
+
+      <p><strong>2. Otomasyon ve gelişmiş görünümler ücretli katmanlarda.</strong> Butler otomasyonu ve takvim gibi bazı görünümler yalnızca üst planlarda tam kapasiteyle çalışıyor; ekosistemdeki üçüncü taraf Power-Up'ların bir kısmı da ayrıca ücretli. <!-- VERIFY PRICE: Power-Up'ların tekil fiyatları bu araştırmada satıcı sayfalarından teker teker doğrulanmadı — yayına almadan önce iddia edeceğiniz bir Power-Up'ı kendi fiyat sayfasından teyit etmeden rakam eklemeyin. --></p>
+
+      <p><strong>3. Kendi sunucunuzda çalıştırma seçeneği yok.</strong> Trello'nun resmi fiyat sayfasında yalnızca Atlassian bulutu üzerinde çalışan planlar listeleniyor; self-hosted bir sürüm sunulmuyor. Veri konumu bir uyum sorusu haline geldiğinde bu somut bir kısıt oluşturuyor. (Ayrıntı: <a href="/kvkk-uyumlu-proje-yonetimi.html">KVKK uyumlu proje yönetimi</a>)</p>
+
+      <h2>Alternatif ararken sorulacak 5 soru</h2>
+      <ol>
+        <li><strong>Ekibiniz workspace başına 10 kişi sınırını aştı mı, yakında aşacak mı?</strong></li>
+        <li><strong>Otomasyon ve Power-Up'lara ne kadar bağımlısınız?</strong> Kaybederseniz iş akışınız bozulur mu?</li>
+        <li><strong>Veri nerede duracak?</strong> Bulutta mı, sizin sunucunuzda mı?</li>
+        <li><strong>Sohbet ve görüntülü arama aynı yerde mi, ayrı abonelik mi?</strong></li>
+        <li><strong>Mevcut panolarınızı nasıl taşıyacaksınız?</strong> Elle mi, dışa aktarımla mı, tek tıkla mı?</li>
+      </ol>
+
+      <h2>Karşılaştırma</h2>
+      <div class="table-scroll">
+        <table class="cmp-table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="is-calio">Calio</th>
+              <th scope="col">Trello Free</th>
+              <th scope="col">Trello Premium</th>
+              <th scope="col">Bitrix24</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Barındırma</th>
+              <td class="is-calio">Kendi sunucunuz</td>
+              <td>Atlassian bulutu (self-hosted seçeneği yok)</td>
+              <td>Atlassian bulutu (self-hosted seçeneği yok)</td>
+              <td>Bulut veya kendi sunucunuz</td>
+            </tr>
+            <tr>
+              <th scope="row">Fiyat</th>
+              <td class="is-calio">TL, kişi başı değil <em>(fiyat yakında açıklanacak)</em></td>
+              <td>Ücretsiz — workspace başına 10 işbirlikçi sınırı (<a href="https://trello.com/pricing" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
+              <td>$10/kullanıcı/ay, yıllık faturalı; aylık faturada $12,50 (<a href="https://trello.com/pricing" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
+              <td>Şirket başına paket, USD (<a href="https://www.bitrix24.com.tr/prices/" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
+            </tr>
+            <tr>
+              <th scope="row">Türkçe arayüz</th>
+              <td class="is-calio">Evet, yerleşik</td>
+              <td>Evet (<a href="https://trello.com/tr" target="_blank" rel="noopener nofollow">trello.com/tr</a>)</td>
+              <td>Evet</td>
+              <td>Evet, yerleşik</td>
+            </tr>
+            <tr>
+              <th scope="row">Dahili ekip sohbeti</th>
+              <td class="is-calio">Evet</td>
+              <td>Hayır</td>
+              <td>Hayır</td>
+              <td>Evet</td>
+            </tr>
+            <tr>
+              <th scope="row">Dahili sesli/görüntülü arama</th>
+              <td class="is-calio">Evet (WebRTC)</td>
+              <td>Hayır</td>
+              <td>Hayır</td>
+              <td>Evet</td>
+            </tr>
+            <tr>
+              <th scope="row">Takvim görünümü</th>
+              <td class="is-calio">Evet</td>
+              <td>Kısmi (Calendar Power-Up)</td>
+              <td>Kısmi (Calendar Power-Up)</td>
+              <td>Evet</td>
+            </tr>
+            <tr>
+              <th scope="row">Denetim kaydı</th>
+              <td class="is-calio">Evet</td>
+              <td>Hayır</td>
+              <td>Hayır (yalnızca Enterprise planında var)</td>
+              <td>Evet</td>
+            </tr>
+            <tr>
+              <th scope="row">Trello'dan içe aktarım</th>
+              <td class="is-calio">Evet, tek tık (API anahtarıyla)</td>
+              <td>—</td>
+              <td>—</td>
+              <td>Doğrulanmadı</td>
+            </tr>
+            <tr>
+              <th scope="row">Kurulum</th>
+              <td class="is-calio">Windows kurulum sihirbazı, Docker gerekmez</td>
+              <td>Kurulum yok (bulut)</td>
+              <td>Kurulum yok (bulut)</td>
+              <td>Sunucu yığını kurulumu (on-prem)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Rakip bilgileri, ilgili şirketlerin kendi kamuya açık sayfalarından 30 Temmuz 2026'da alınmıştır ve her satır kaynaklıdır. Bir hata gördüğünüzü düşünüyorsanız yazın, 48 saat içinde düzeltiriz.</p>
+
+      <h2>Trello'dan Calio'ya taşıma</h2>
+      <p>Trello API anahtarınızı girip panonuzu seçiyorsunuz. Aktarılanlar:</p>
+      <ul>
+        <li>Listeler ve kolon düzeni</li>
+        <li>Kartlar — başlık ve açıklamalarıyla</li>
+        <li>Son tarihler</li>
+        <li>Öncelikler</li>
+        <li>Durumlar (Yapılacak · Devam Ediyor · Tamamlandı)</li>
+        <li>Etiketler, renkleriyle birlikte</li>
+      </ul>
+      <p><strong>Aktarılmayanlar — bunu baştan söylüyoruz:</strong> yorumlar, ek dosyalar ve kişi atamaları bu sürümde taşınmıyor. Atamaları içe aktarımdan sonra ekibinizle dakikalar içinde yapıyorsunuz. Tek içe aktarımda 500 kayda kadar taşınır.</p>
+      <p>Demo görüşmesinde bunu <strong>sizin gerçek panonuzla, canlı</strong> yapıyoruz — taşımanın nasıl göründüğünü satın almadan önce görüyorsunuz.</p>
+
+      <h2>Sık gelen üç itiraz</h2>
+
+      <h3>"Trello ücretsiz zaten."</h3>
+      <p>10 kişiye kadar, evet. Ekip büyüdükçe ya Standard/Premium'a geçiyorsunuz ya da otomasyon ve gelişmiş görünümlerden vazgeçiyorsunuz. Calio'nun fiyatı kişi başı değil; ekip büyüdükçe fatura mantığı değişmiyor.</p>
+
+      <h3>"Power-Up ekosistemini kaybederim."</h3>
+      <p>Haklısınız — Calio, Trello'nun geniş Power-Up mağazasına sahip değil. Takvim, hatırlatıcı, denetim kaydı ve dahili sohbet/görüntülü arama gibi en sık kullanılan ihtiyaçlar yerleşik geliyor; niş bir Power-Up'a bağımlıysanız demo görüşmesinde bunu birlikte kontrol edelim.</p>
+
+      <h3>"Ekibim Trello'ya alışkın."</h3>
+      <p>Calio aynı düzeni kullanıyor: liste, kart, sürükle-bırak. Trello panosu kullanabilen biri birkaç dakikada Calio'ya geçiyor. Deneyin: <a href="https://demo.calio.space" target="_blank" rel="noopener">demo.calio.space</a></p>
+
+      <h2>Calio kimin için doğru değil?</h2>
+      <ul>
+        <li><strong>Niş bir Power-Up ekosistemine bağımlıysanız</strong> (özel entegrasyonlar, üçüncü taraf eklentiler), Calio bunların çoğunu sunmuyor.</li>
+        <li><strong>Gantt şeması veya zaman çizelgesi</strong> gerekiyorsa Calio'da yok.</li>
+        <li><strong>Sahada, telefondan kart taşıyan bir ekipseniz:</strong> mobil tarayıcıdan pano çalışıyor ama ayrı bir mobil uygulama şu an yok.</li>
+        <li><strong>200 kişilik bir organizasyonsanız</strong>, Calio bugün için doğru seçim olmayabilir.</li>
+      </ul>
+      <p>Bunları demo görüşmesinde konuşuyoruz. Size uymuyorsa bunu söylemek, satmaya çalışmaktan daha iyi.</p>
+
+      <h2>Sıradaki adım</h2>
+      <p>Trello panonuzu 30 dakikalık bir demoda <strong>canlı aktaralım.</strong> Satış baskısı yok; kendi kullanım senaryonuz üzerinden ilerliyoruz.</p>
+      <p><strong>Lansman kampanyası:</strong> demo talep eden ilk 5 şirket Calio'yu 6 ay boyunca ücretsiz kullanıyor.</p>
+
+      <div class="landing-cta">
+        <a href="/#demo" class="btn btn-primary btn-lg">Demo Talep Et →</a>
+        <a href="https://demo.calio.space" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">Canlı demoyu şimdi deneyin →</a>
+      </div>
+    </article>
+
+    <section class="related-pages" aria-label="İlgili sayfalar">
+      <h2>İlgili sayfalar</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/jira-alternatifi.html">Jira Alternatifi<span>Kendi sunucunuzda Türkçe Kanban</span></a>
+        <a class="related-card" href="/self-hosted-proje-yonetimi.html">Self-Hosted Proje Yönetimi<span>Kendi sunucunuza kurun</span></a>
+        <a class="related-card" href="/en-iyi-kanban-araclari.html">En İyi Kanban Araçları<span>2026 karşılaştırması</span></a>
+        <a class="related-card" href="/sorular.html">Sorular ve Cevaplar<span>Self-hosted, KVKK, Kanban SSS</span></a>
+      </div>
+    </section>
+
+    <footer class="legal-foot">
+      <p>© 2026 Calio — <a href="/">ana sayfaya dön</a></p>
+    </footer>
+  </main>
+</body>
+</html>

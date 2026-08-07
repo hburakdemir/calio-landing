@@ -82,7 +82,12 @@ const landingPages = [
   'jira-alternatifi.html',
   'kvkk-uyumlu-proje-yonetimi.html',
   'self-hosted-proje-yonetimi.html',
-  'sorular.html'
+  'sorular.html',
+  'trello-alternatifi.html',
+  'azure-devops-alternatifi.html',
+  'notion-alternatifi.html',
+  'asana-karsilastirma.html',
+  'en-iyi-kanban-araclari.html'
 ];
 for (const file of landingPages) {
   const p = path.join(dist, file);
@@ -103,7 +108,12 @@ const urls = [
   '/jira-alternatifi.html',
   '/kvkk-uyumlu-proje-yonetimi.html',
   '/self-hosted-proje-yonetimi.html',
-  '/sorular.html'
+  '/sorular.html',
+  '/trello-alternatifi.html',
+  '/azure-devops-alternatifi.html',
+  '/notion-alternatifi.html',
+  '/asana-karsilastirma.html',
+  '/en-iyi-kanban-araclari.html'
 ];
 writeFileSync(
   path.join(dist, 'sitemap.xml'),
