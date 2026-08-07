@@ -18,12 +18,24 @@
     } catch (e) {}
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calio — Kendi sunucunuzda proje yönetimi | Kanban, sohbet, takvim</title>
-  <meta name="description" content="Jira, Trello, Azure DevOps ve Notion'dan tek tıkla taşının. Kanban panoları, ekip sohbeti, görüntülü arama ve takvim — kendi sunucunuzda, verileriniz Türkiye'de." />
+  <title>Kendi Sunucunuzda Proje Yönetimi Yazılımı | Calio</title>
+  <meta name="description" content="Kanban panoları, ekip sohbeti, görüntülü arama ve takvim tek uygulamada. Kendi sunucunuzda çalışır, veriler Türkiye'de kalır. Jira ve Trello'dan taşıyın." />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Calio — Kendi sunucunuzda proje yönetimi | Kanban, sohbet, takvim" />
-  <meta property="og:description" content="Jira, Trello, Azure DevOps ve Notion'dan tek tıkla taşının. Kanban panoları, ekip sohbeti, görüntülü arama ve takvim — kendi sunucunuzda, verileriniz Türkiye'de." />
+  <meta property="og:title" content="Kendi Sunucunuzda Proje Yönetimi Yazılımı | Calio" />
+  <meta property="og:description" content="Kanban panoları, ekip sohbeti, görüntülü arama ve takvim tek uygulamada. Kendi sunucunuzda çalışır, veriler Türkiye'de kalır. Jira ve Trello'dan taşıyın." />
   <meta property="og:image" content="/og.jpg" />
+  <meta property="og:url" content="https://calio.space/" />
+  <meta property="og:site_name" content="Calio" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Calio — kendi sunucunuzda proje yönetimi" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kendi Sunucunuzda Proje Yönetimi Yazılımı | Calio" />
+  <meta name="twitter:description" content="Kanban panoları, ekip sohbeti, görüntülü arama ve takvim tek uygulamada. Kendi sunucunuzda çalışır, veriler Türkiye'de kalır. Jira ve Trello'dan taşıyın." />
+  <meta name="twitter:image" content="/og.jpg" />
+  <meta name="theme-color" content="#0F766E" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <script type="module" src="/src/main.js"></script>
 </head>
@@ -911,6 +923,7 @@
           <button type="button" class="lang-btn" data-locale="en" aria-pressed="false">EN</button>
         </div>
         <a class="footer-mail" href="mailto:burakd279@gmail.com">burakd279@gmail.com</a>
+        <a class="footer-mail" href="https://www.linkedin.com/company/caliospace" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
     <div class="container footer-bottom">
@@ -918,6 +931,99 @@
       <p class="footer-copy" data-i18n="footer.copyright">© 2026 Calio — Türkiye'de geliştirildi.</p>
     </div>
   </footer>
+
+  <script type="application/ld+json" id="calio-schema">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://calio.space/#organization",
+        "name": "Calio",
+        "url": "https://calio.space/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://calio.space/og.jpg",
+          "width": 1200,
+          "height": 630
+        },
+        "email": "burakd279@gmail.com",
+        "foundingDate": "2026",
+        "areaServed": { "@type": "Country", "name": "Türkiye" },
+        "knowsLanguage": ["tr", "en"],
+        "description": "Calio, verilerin kurumun kendi sunucusunda kaldığı self-hosted proje yönetim platformudur.",
+        "sameAs": ["https://www.linkedin.com/company/caliospace"],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "burakd279@gmail.com",
+          "availableLanguage": ["Turkish", "English"]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://calio.space/#website",
+        "url": "https://calio.space/",
+        "name": "Calio",
+        "description": "Kendi sunucunuzda çalışan proje yönetim platformu.",
+        "publisher": { "@id": "https://calio.space/#organization" },
+        "inLanguage": "tr-TR"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://calio.space/#software",
+        "name": "Calio",
+        "url": "https://calio.space/",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Project Management Software",
+        "operatingSystem": "Windows, Linux, Web",
+        "softwareVersion": "1.0",
+        "inLanguage": ["tr", "en"],
+        "publisher": { "@id": "https://calio.space/#organization" },
+        "screenshot": [
+          "https://calio.space/shots/04-board-kanban-dark-1600.webp",
+          "https://calio.space/shots/02-dashboard-dark-1600.webp",
+          "https://calio.space/shots/08-chat-dark-1600.webp",
+          "https://calio.space/shots/05-calendar-dark-1600.webp"
+        ],
+        "description": "Kanban panoları, ekip sohbeti, sesli/görüntülü arama, takvim ve değiştirilemez denetim kaydını tek uygulamada birleştiren self-hosted proje yönetim platformu. Jira, Trello, Azure DevOps ve Notion'dan tek tıkla içe aktarım.",
+        "featureList": [
+          "Gerçek zamanlı kanban panoları",
+          "Kanal, grup ve birebir ekip sohbeti",
+          "Sesli ve görüntülü arama",
+          "Takvim ve otomatik hatırlatıcılar",
+          "Değiştirilemez denetim kaydı",
+          "Roller ve ayrıntılı yetkilendirme (RBAC)",
+          "Jira, Trello, Azure DevOps ve Notion'dan içe aktarma",
+          "Windows ve Linux masaüstü uygulaması",
+          "Docker ve npm ile kurulum"
+        ],
+        "installUrl": "https://calio.space/",
+        "isAccessibleForFree": false
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://calio.space/#faq",
+        "inLanguage": "tr-TR",
+        "isPartOf": { "@id": "https://calio.space/#website" },
+        "mainEntity": [
+          { "@type": "Question", "name": "Kurulum için ne gerekiyor?", "acceptedAnswer": { "@type": "Answer", "text": "Sürekli açık bir Windows bilgisayar ya da sunucu yeterli — Windows Server şart değil. Calio Server kurulum sihirbazı, veritabanı dahil her şeyi kurar; Docker ya da DevOps bilgisi gerekmez. Nasıl çalışacağı da size kalmış: ister Windows servisi yapın, ister uygulamadan manuel başlatın, ister bilgisayar açıldığında kendiliğinden başlamasını sağlayın. Ekip, Windows/macOS masaüstü uygulamasından veya tarayıcıdan bağlanır — localhost'ta bile çalışır, alan adı zorunlu değildir." } },
+          { "@type": "Question", "name": "Verilerimiz gerçekten bizde mi?", "acceptedAnswer": { "@type": "Answer", "text": "Evet. Uygulama ve veritabanı kendi sunucunuzda çalışır. Dilediğiniz an yedek alırsınız, dilediğiniz an dışa aktarırsınız — veriniz zaten sizde olduğu için “vazgeçersem verilerim ne olacak?” sorusu ortadan kalkar." } },
+          { "@type": "Question", "name": "Jira'dan / Trello'dan taşınmak ne kadar sürer?", "acceptedAnswer": { "@type": "Answer", "text": "API anahtarınızla bağlanıp projenizi seçersiniz; yüzlerce kart dakikalar içinde aktarılır. Bu sürümde yorumlar, ek dosyalar ve atamalar aktarılmaz." } },
+          { "@type": "Question", "name": "Ekibim yeni araca alışabilir mi?", "acceptedAnswer": { "@type": "Answer", "text": "Trello kullanabilen herkes Calio'yu 5 dakikada öğrenir. Arayüz Türkçe ve İngilizce; kısayollar ve akış bildik kanban düzenidir." } },
+          { "@type": "Question", "name": "Destek nasıl işliyor?", "acceptedAnswer": { "@type": "Answer", "text": "Türkçe destek, Türkiye saat diliminde. E-postanız aracıya değil, doğrudan geliştiriciye düşer; 1 iş günü içinde yanıt alırsınız." } },
+          { "@type": "Question", "name": "Güncellemeler ve bakım?", "acceptedAnswer": { "@type": "Answer", "text": "Masaüstü uygulama kendini otomatik günceller; sunucu güncellemeleri tek tıkla kurulur. Sürümler düzenli olarak yayınlanır." } },
+          { "@type": "Question", "name": "KOSGEB desteğiyle alınabilir mi?", "acceptedAnswer": { "@type": "Answer", "text": "Yerli yazılım olarak KOSGEB dijitalleşme destekleri kapsamında değerlendirilebilir. Süreçle ilgili soruları demo görüşmesinde birlikte netleştiriyoruz." } },
+          { "@type": "Question", "name": "Fiyat ne zaman açıklanacak?", "acceptedAnswer": { "@type": "Answer", "text": "Çok yakında, TL bazında. Demo talep edenlere lansman fiyatı ilk olarak iletilecek." } },
+          { "@type": "Question", "name": "Tek geliştiriciyseniz, size bir şey olursa ne olur?", "acceptedAnswer": { "@type": "Answer", "text": "Calio kendi sunucunuzda çalışır ve veritabanı sizdedir — bu bir 'vendor lock-in' riski taşımadığı anlamına gelir. Kaynak kod ve verileriniz bize değil, kendi altyapınıza bağımlıdır. Ekibimizi büyüttükçe bu konudaki planlarımızı demo görüşmesinde açıkça paylaşırız." } },
+          { "@type": "Question", "name": "Ekibim ofis dışından bağlanabilir mi?", "acceptedAnswer": { "@type": "Answer", "text": "Evet. Sunucunuzu şirket ağınızda bir IP ile ya da kendi alan adınızla yayınlarsanız, ekibiniz evden, sahadan veya seyahatteyken normal internet üzerinden bağlanır — VPN zorunlu değildir, tercihen ek bir güvenlik katmanı olarak kullanılabilir." } },
+          { "@type": "Question", "name": "Telefondan da kullanılabiliyor mu?", "acceptedAnswer": { "@type": "Answer", "text": "Tarayıcı üzerinden telefon ve tabletten de giriş yapıp panolarınızı, sohbeti ve takvimi görebilirsiniz. Ayrı bir mobil uygulama şu an yok; sürükle-bırak pano deneyimi tablet ve masaüstünde en rahat kullanım için tasarlandı." } },
+          { "@type": "Question", "name": "Kimin için doğru değil?", "acceptedAnswer": { "@type": "Answer", "text": "Ekibiniz 200+ kişiyse ya da sunucu yönetecek kimseniz yoksa, Calio şu an için doğru seçim olmayabilir — bunu demo görüşmesinde dürüstçe konuşuruz." } }
+        ]
+      }
+    ]
+  }
+  </script>
 
 </body>
 </html>

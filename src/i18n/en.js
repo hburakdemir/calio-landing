@@ -11,6 +11,7 @@ export default {
   'nav.pricing': 'Pricing',
   'nav.faq': 'FAQ',
   'nav.cta': 'Request a Demo',
+  'nav.ctaTry': 'Try the Demo',
   'nav.menuOpen': 'Open menu',
   'nav.menuClose': 'Close menu',
   'nav.langLabel': 'Language',
@@ -23,7 +24,8 @@ export default {
   'hero.h1a': "All of your team's work,",
   'hero.h1b': 'in one app.',
   'hero.sub':
-    'Kanban boards, team chat, voice & video calls, calendar and an audit trail — running on your own server, so your data never leaves Turkey.',
+    'Kanban boards, team chat, voice & video calls, calendar and an audit trail — running on your own server, priced in lira, your data never leaves Turkey.',
+  'hero.ctaTry': 'Try the Live Demo',
   'hero.cta1': 'Request a Demo',
   'hero.cta2': 'Explore the Product',
   'hero.scrollCue': 'Scroll down',
@@ -46,7 +48,7 @@ export default {
   'problem.c1.title': 'The exchange-rate bill',
   'problem.c1.body':
     'You pay foreign tools per seat, in dollars. Every currency swing moves your software spend; by year-end the budget is far off plan.',
-  'problem.c2.title': 'Data abroad',
+  'problem.c2.title': "KVKK's shadow",
   'problem.c2.body':
     "Your cards, files and client details sit on another country's servers — and the KVKK question keeps getting postponed.",
   'problem.c3.title': 'Tool sprawl',
@@ -133,13 +135,13 @@ export default {
   'security.note.body':
     "Because the app and the database run on your own server, keeping that server and its login details safe is on you. Calio ships with strong protections built in — but not sharing your password, keeping unauthorized people off your server, and taking regular backups is your responsibility.",
   'security.kvkk':
-    "Cross-border data transfers face ever-tighter scrutiny under Turkey's KVKK. With Calio the risk never reaches your agenda: your data never leaves your company's server, so there are no transfer permits, no extra contracts, no “what ifs.” Feel free to forward this page to legal and IT.",
+    "A 2024 legal change tightened cross-border data transfer rules under Turkey's KVKK considerably; ongoing transfers can no longer rely on consent alone. With Calio the risk never reaches your agenda: your data never leaves your company's server, so there are no transfer permits, no extra contracts, no “what ifs.” Feel free to forward this page to legal and IT.",
 
   // Pricing
   'pricing.eyebrow': 'PRICING',
   'pricing.h2': "It looks expensive. We know. It isn't.",
   'pricing.body':
-    "Our pricing will be announced in Turkish lira, not pegged to any currency — very soon. Instead of per-seat dollar subscriptions, we're building a model that makes sense for your whole team. Demo requesters will be the first to know the launch price.",
+    "Our pricing will be announced in Turkish lira, not pegged to any currency — very soon. Instead of per-seat dollar subscriptions, we're building a model where your bill doesn't multiply as your team grows. Demo requesters will be the first to know the launch price.",
   'pricing.badge': 'Coming soon',
   'pricing.row': '₺ ——— / mo',
   'pricing.cta': 'Request a Demo — be first to know the launch price',
@@ -175,6 +177,18 @@ export default {
     'As locally developed software it may qualify under KOSGEB digitalization supports. We clarify the process together during the demo call.',
   'faq.q8': 'When will pricing be announced?',
   'faq.a8': 'Very soon, in Turkish lira. Demo requesters will be told the launch price first.',
+  'faq.q9': "If you're a solo developer, what happens if something happens to you?",
+  'faq.a9':
+    "Calio runs on your own server and the database is yours — that means no vendor lock-in risk. Your source code and data depend on your own infrastructure, not on us. As we grow the team, we'll share our continuity plans openly on the demo call.",
+  'faq.q10': 'Can my team connect from outside the office?',
+  'faq.a10':
+    "Yes. If you publish your server on an IP on your company network or your own domain, your team connects from home, the field, or on the road over a normal internet connection — a VPN isn't required, though you can layer one on for extra security if you like.",
+  'faq.q11': 'Does it work from a phone?',
+  'faq.a11':
+    "Yes, you can log in and view your boards, chat and calendar from a phone or tablet browser. There's no separate mobile app yet; the drag-and-drop board experience is designed to feel best on tablet and desktop.",
+  'faq.q12': "Who is it not right for?",
+  'faq.a12':
+    "If your team is 200+ people, or you don't have anyone to manage a server, Calio may not be the right fit today — we'll talk about that honestly on the demo call.",
 
   // Demo section
   'demo.eyebrow': 'DEMO',

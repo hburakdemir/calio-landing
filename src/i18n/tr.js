@@ -1,8 +1,8 @@
 // Turkish dictionary — default locale. Keys are flat, namespaced.
 export default {
-  'meta.title': 'Calio — Kendi sunucunuzda proje yönetimi | Kanban, sohbet, takvim',
+  'meta.title': 'Kendi Sunucunuzda Proje Yönetimi Yazılımı | Calio',
   'meta.desc':
-    "Jira, Trello, Azure DevOps ve Notion'dan tek tıkla taşının. Kanban panoları, ekip sohbeti, görüntülü arama ve takvim — kendi sunucunuzda, verileriniz Türkiye'de.",
+    "Kanban panoları, ekip sohbeti, görüntülü arama ve takvim tek uygulamada. Kendi sunucunuzda çalışır, veriler Türkiye'de kalır. Jira ve Trello'dan taşıyın.",
 
   // Nav
   'nav.features': 'Özellikler',
@@ -11,6 +11,7 @@ export default {
   'nav.pricing': 'Fiyatlandırma',
   'nav.faq': 'SSS',
   'nav.cta': 'Demo Talep Et',
+  'nav.ctaTry': 'Demoyu Dene',
   'nav.menuOpen': 'Menüyü aç',
   'nav.menuClose': 'Menüyü kapat',
   'nav.langLabel': 'Dil seçimi',
@@ -23,7 +24,8 @@ export default {
   'hero.h1a': 'Ekibinizin tüm işi,',
   'hero.h1b': 'tek uygulamada.',
   'hero.sub':
-    'Kanban panoları, ekip sohbeti, sesli/görüntülü arama, takvim ve denetim kaydı — kendi sunucunuzda çalışır, verileriniz Türkiye’den çıkmaz.',
+    'Kanban panoları, ekip sohbeti, sesli/görüntülü arama, takvim ve denetim kaydı — kendi sunucunuzda çalışır, TL ile fiyatlanır, verileriniz Türkiye’den çıkmaz.',
+  'hero.ctaTry': 'Demoyu Hemen Dene',
   'hero.cta1': 'Demo Talep Et',
   'hero.cta2': 'Ürünü Keşfet',
   'hero.scrollCue': 'Aşağı kaydırın',
@@ -46,7 +48,7 @@ export default {
   'problem.c1.title': 'Kur faturası',
   'problem.c1.body':
     'Yurt dışı araçlara kişi başı dolarla ödüyorsunuz. Kur her oynadığında yazılım gideriniz de oynuyor; yıl sonunda bütçe planın çok üzerinde.',
-  'problem.c2.title': 'Veri yurt dışında',
+  'problem.c2.title': "KVKK'nın gölgesi",
   'problem.c2.body':
     'Kartlarınız, dosyalarınız, müşteri bilgileriniz başka bir ülkenin sunucusunda duruyor. KVKK tarafı ise hep “sonra bakarız”.',
   'problem.c3.title': 'Araç kalabalığı',
@@ -130,13 +132,13 @@ export default {
   'security.note.body':
     'Uygulama da veritabanı da kendi sunucunuzda çalıştığı için o sunucunun ve giriş bilgilerinin güvenliği size kalır. Calio güçlü korumalarla gelir; ama şifrenizi kimseyle paylaşmamak, sunucunuza yetkisiz erişimi engellemek ve düzenli yedek almak sizin elinizde.',
   'security.kvkk':
-    "KVKK'da yurt dışına veri aktarımı her yıl daha sıkı denetleniyor. Calio'da bu risk gündeminize hiç girmez: veriniz şirketinizin sunucusundan dışarı çıkmadığı için aktarım izni, ek sözleşme ve “acaba” kalmaz. Bu sayfayı hukuk ve IT ekibinize gönderebilirsiniz.",
+    "2024'te yürürlüğe giren değişiklikle KVKK'da yurt dışına veri aktarımı kuralları belirgin şekilde sıkılaştı; sürekli veri aktarımlarında artık salt açık rıza yeterli görülmüyor. Calio'da bu risk gündeminize hiç girmez: veriniz şirketinizin sunucusundan dışarı çıkmadığı için aktarım izni, ek sözleşme ve “acaba” kalmaz. Bu sayfayı hukuk ve IT ekibinize gönderebilirsiniz.",
 
   // Pricing
   'pricing.eyebrow': 'FİYATLANDIRMA',
   'pricing.h2': 'Pahalı görünüyor, biliyoruz. Değil.',
   'pricing.body':
-    'Fiyatlarımızı TL bazında, kura endekslemeden açıklayacağız — çok yakında. Kişi başı dolar aboneliği yerine, ekibinizin tamamına mantıklı gelen bir model üzerinde çalışıyoruz. Lansman fiyatını ilk öğrenenler, demo talep edenler olacak.',
+    'Fiyatlarımızı TL bazında, kura endekslemeden açıklayacağız — çok yakında. Kişi başı dolar aboneliği yerine, ekibiniz büyüdükçe faturanız kat kat artmayan bir model üzerinde çalışıyoruz. Lansman fiyatını ilk öğrenenler, demo talep edenler olacak.',
   'pricing.badge': 'Yakında',
   'pricing.row': '₺ ——— / ay',
   'pricing.cta': 'Demo Talep Et — lansman fiyatını ilk siz öğrenin',
@@ -173,6 +175,18 @@ export default {
   'faq.q8': 'Fiyat ne zaman açıklanacak?',
   'faq.a8':
     'Çok yakında, TL bazında. Demo talep edenlere lansman fiyatı ilk olarak iletilecek.',
+  'faq.q9': 'Tek geliştiriciyseniz, size bir şey olursa ne olur?',
+  'faq.a9':
+    "Calio kendi sunucunuzda çalışır ve veritabanı sizdedir — bu bir 'vendor lock-in' riski taşımadığı anlamına gelir. Kaynak kod ve verileriniz bize değil, kendi altyapınıza bağımlıdır. Ekibimizi büyüttükçe bu konudaki planlarımızı demo görüşmesinde açıkça paylaşırız.",
+  'faq.q10': 'Ekibim ofis dışından bağlanabilir mi?',
+  'faq.a10':
+    'Evet. Sunucunuzu şirket ağınızda bir IP ile ya da kendi alan adınızla yayınlarsanız, ekibiniz evden, sahadan veya seyahatteyken normal internet üzerinden bağlanır — VPN zorunlu değildir, tercihen ek bir güvenlik katmanı olarak kullanılabilir.',
+  'faq.q11': 'Telefondan da kullanılabiliyor mu?',
+  'faq.a11':
+    'Tarayıcı üzerinden telefon ve tabletten de giriş yapıp panolarınızı, sohbeti ve takvimi görebilirsiniz. Ayrı bir mobil uygulama şu an yok; sürükle-bırak pano deneyimi tablet ve masaüstünde en rahat kullanım için tasarlandı.',
+  'faq.q12': 'Kimin için doğru değil?',
+  'faq.a12':
+    'Ekibiniz 200+ kişiyse ya da sunucu yönetecek kimseniz yoksa, Calio şu an için doğru seçim olmayabilir — bunu demo görüşmesinde dürüstçe konuşuruz.',
 
   // Demo section
   'demo.eyebrow': 'DEMO',
