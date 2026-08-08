@@ -10,13 +10,13 @@
     } catch (e) {}
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Notion Alternatifi: Proje Yönetimi İçin Kendi Sunucunuzda | Calio</title>
-  <meta name="description" content="Notion'ı proje takibi için mi kullanıyorsunuz? Calio amaca özel bir kanban aracı: kendi sunucunuzda çalışır, Türkçe arayüz sunar, Notion'dan tek tıkla taşırsınız." />
+  <title>Güvenlik ve Barındırma: Verileriniz Türkiye'de | Calio</title>
+  <meta name="description" content="Calio bulut aboneliği değildir. Uygulama da veritabanı da kendi sunucunuzda çalışır; yedeğini siz alırsınız, erişimi siz yönetirsiniz. Kurulum ve güvenlik detayları." />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Notion Alternatifi: Proje Yönetimi İçin Kendi Sunucunuzda | Calio" />
-  <meta property="og:description" content="Notion'ı proje takibi için mi kullanıyorsunuz? Calio amaca özel bir kanban aracı: kendi sunucunuzda çalışır, Türkçe arayüz sunar, Notion'dan tek tıkla taşırsınız." />
+  <meta property="og:title" content="Güvenlik ve Barındırma: Verileriniz Türkiye'de | Calio" />
+  <meta property="og:description" content="Calio bulut aboneliği değildir. Uygulama da veritabanı da kendi sunucunuzda çalışır; yedeğini siz alırsınız, erişimi siz yönetirsiniz. Kurulum ve güvenlik detayları." />
   <meta property="og:image" content="https://calio.space/og.jpg" />
-  <meta property="og:url" content="https://calio.space/notion-alternatifi" />
+  <meta property="og:url" content="https://calio.space/guvenlik" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <script type="module" src="/src/landing.js"></script>
   <script type="application/ld+json">
@@ -25,7 +25,7 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://calio.space/" },
-      { "@type": "ListItem", "position": 2, "name": "Notion Alternatifi", "item": "https://calio.space/notion-alternatifi" }
+      { "@type": "ListItem", "position": 2, "name": "Güvenlik", "item": "https://calio.space/guvenlik" }
     ]
   }
   </script>
@@ -123,127 +123,49 @@
   </header>
 
   <main class="legal-page landing-page">
-    <p class="landing-breadcrumb"><a href="/">Ana Sayfa</a> / Notion Alternatifi</p>
+    <p class="landing-breadcrumb"><a href="/">Ana Sayfa</a> / Güvenlik</p>
 
     <article class="legal-doc landing-doc">
-      <h1>Notion'da Proje Takibi Yapıyorsanız: Daha Amaca Uygun Bir Araç</h1>
-      <p class="legal-updated">Yayın tarihi: 7 Ağustos 2026</p>
+      <h1>Verileriniz Türkiye'de. Çünkü Hiç Çıkmıyor.</h1>
+      <p class="legal-updated">Güncellendi: 7 Ağustos 2026</p>
 
-      <p>Notion, temelde bir belge / wiki / veritabanı aracı. Kanban ("Board") görünümü, Notion'ın veritabanı özelliğinin sunduğu birçok görünümden yalnızca biri — aynı verinin tablo, liste, takvim, galeri ve board olarak farklı temsilleri. Bu esneklik doküman ve bilgi tabanı için güçlü bir tasarım. Ama ekibiniz Notion'ı asıl olarak <strong>görev ve proje takibi</strong> için kullanıyorsa, amaca özel bir kanban aracının verdiği bazı şeyler eksik kalıyor.</p>
+      <p>Calio bulut aboneliği değildir. Uygulama da veritabanı da kendi sunucunuzda çalışır; yedeğini siz alırsınız, erişimi siz yönetirsiniz.</p>
 
-      <h2>Notion'ı proje yönetimi için kullanmanın gerçek sınırları</h2>
+      <h2>Nasıl çalışır</h2>
+      <ol>
+        <li>Calio Server'ı Windows bilgisayarınıza ya da sunucunuza kurun — tek kurulum sihirbazı, Windows Server şart değil. Docker yok, DevOps yok.</li>
+        <li>Ekibinizi davet edin, havuz ve proje rollerini belirleyin.</li>
+        <li>Eski aracınızdan tek tıkla içe aktarın, çalışmaya başlayın.</li>
+      </ol>
 
-      <p><strong>1. Board, özel bir iş takip motoru değil.</strong> WIP limiti, otomatik durum geçişleri, öncelik bazlı sıralama gibi kanban'a özgü kavramlar Notion'da yerleşik değil — şablon ve elle kurulan otomasyonla taklit edilir. Amaca özel bir kanban aracında bunlar varsayılan olarak gelir.</p>
+      <h2>İstediğiniz gibi çalıştırın</h2>
+      <h3>Windows servisi</h3>
+      <p>Tek tıkla Windows servisi olarak kurun; sunucu yeniden başlasa bile Calio arka planda kendiliğinden ayağa kalkar.</p>
+      <h3>Manuel başlatma</h3>
+      <p>Calio Server uygulamasını açın, Başlat'a tıklayın. Kurcalamak istemeyenler için en kısa yol.</p>
+      <h3>Otomatik başlatma</h3>
+      <p>Bilgisayar açıldığında Calio Server da kendiliğinden çalışsın; siz hiçbir düğmeye basmazsınız.</p>
+      <p>İster localhost'ta deneyin, ister şirket ağınızda bir IP ya da kendi alan adınızla yayınlayın — zorunlu alan adı yok, kurulum sihirbazı hepsini destekler.</p>
 
-      <p><strong>2. Ekip iletişimi Notion'ın kapsamında değil.</strong> Sayfa içi yorumlar var, ama dahili kanal/grup sohbeti ya da sesli/görüntülü arama yok — bunlar için ayrı bir araç (Slack, Teams, Zoom) gerekiyor.</p>
-
-      <p><strong>3. Kendi sunucunuzda çalıştırma seçeneği yok.</strong> Notion'ın resmi fiyat sayfasında yalnızca bulut planları listeleniyor; self-hosted bir sürüm sunulmuyor. Kaynak: <a href="https://www.notion.com/pricing" target="_blank" rel="noopener nofollow">notion.com/pricing</a>, 7 Ağustos 2026.</p>
-
-      <p><strong>4. Türkçe arayüz resmî dil listesinde yok.</strong> Notion, kendi duyurusuna göre toplam 21 dile ulaştı (Arapça ve İbranice'nin eklenmesiyle); Türkçe bu listede yer almıyor. Kaynak: <a href="https://www.notion.com/help/change-your-language" target="_blank" rel="noopener nofollow">notion.com/help/change-your-language</a>, 7 Ağustos 2026.</p>
-
-      <h2>Karşılaştırma</h2>
-      <div class="table-scroll">
-        <table class="cmp-table">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col" class="is-calio">Calio</th>
-              <th scope="col">Notion Free</th>
-              <th scope="col">Notion Business</th>
-              <th scope="col">Bitrix24</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Tasarım amacı</th>
-              <td class="is-calio">Amaca özel kanban + ekip iletişimi</td>
-              <td>Genel amaçlı doküman / wiki / veritabanı</td>
-              <td>Genel amaçlı doküman / wiki / veritabanı</td>
-              <td>Genel amaçlı CRM + intranet + proje</td>
-            </tr>
-            <tr>
-              <th scope="row">Barındırma</th>
-              <td class="is-calio">Kendi sunucunuz</td>
-              <td>Notion bulutu (self-hosted seçeneği yok)</td>
-              <td>Notion bulutu (self-hosted seçeneği yok)</td>
-              <td>Bulut veya kendi sunucunuz</td>
-            </tr>
-            <tr>
-              <th scope="row">Fiyat</th>
-              <td class="is-calio">TL, kişi başı değil <em>(fiyat yakında açıklanacak)</em></td>
-              <td>Ücretsiz (<a href="https://www.notion.com/pricing" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
-              <td>$20/üye/ay (<a href="https://www.notion.com/pricing" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
-              <td>Şirket başına paket, USD (<a href="https://www.bitrix24.com.tr/prices/" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
-            </tr>
-            <tr>
-              <th scope="row">Türkçe arayüz</th>
-              <td class="is-calio">Evet, yerleşik</td>
-              <td>Hayır (<a href="https://www.notion.com/help/change-your-language" target="_blank" rel="noopener nofollow">kaynak</a>)</td>
-              <td>Hayır</td>
-              <td>Evet, yerleşik</td>
-            </tr>
-            <tr>
-              <th scope="row">Dahili ekip sohbeti</th>
-              <td class="is-calio">Evet</td>
-              <td>Kısmi (sayfa içi yorum)</td>
-              <td>Kısmi (sayfa içi yorum)</td>
-              <td>Evet</td>
-            </tr>
-            <tr>
-              <th scope="row">Dahili sesli/görüntülü arama</th>
-              <td class="is-calio">Evet (WebRTC)</td>
-              <td>Hayır</td>
-              <td>Hayır</td>
-              <td>Evet</td>
-            </tr>
-            <tr>
-              <th scope="row">Denetim kaydı</th>
-              <td class="is-calio">Evet</td>
-              <td>Hayır</td>
-              <td>Evet (Enterprise planında)</td>
-              <td>Evet</td>
-            </tr>
-            <tr>
-              <th scope="row">Notion'dan içe aktarım</th>
-              <td class="is-calio">Evet, tek tık (API anahtarıyla)</td>
-              <td>—</td>
-              <td>—</td>
-              <td>Doğrulanmadı</td>
-            </tr>
-            <tr>
-              <th scope="row">Kurulum</th>
-              <td class="is-calio">Windows kurulum sihirbazı, Docker gerekmez</td>
-              <td>Kurulum yok (bulut)</td>
-              <td>Kurulum yok (bulut)</td>
-              <td>Sunucu yığını kurulumu (on-prem)</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="table-note">Rakip bilgileri, ilgili şirketlerin kendi kamuya açık sayfalarından 30 Temmuz – 7 Ağustos 2026 arasında alınmıştır ve her satır kaynaklıdır. Bir hata gördüğünüzü düşünüyorsanız yazın, 48 saat içinde düzeltiriz.</p>
-
-      <h2>Notion'dan Calio'ya taşıma</h2>
-      <p>Notion API anahtarınızı girip veritabanınızı seçiyorsunuz. Aktarılanlar: satırlar kart olarak, başlık, durum/grup özelliği kolon olarak, son tarih özelliği (varsa) ve seçim (select) özellikleri renkleriyle birlikte etiket olarak.</p>
-      <div class="callout callout-warn">
-        <p><strong>Görünür yerde tekrar ediyoruz:</strong> Notion içe aktarımında kart açıklamaları — yani sayfanın zengin metin içeriği (page body) — dahil değildir; yalnızca veritabanı satırının özellik (property) değerleri aktarılır. Yorumlar, ek dosyalar ve kişi atamaları da aktarılmaz. Atamaları içe aktarımdan sonra ekibinizle dakikalar içinde yapıyorsunuz. Tek içe aktarımda 500 kayda kadar taşınır.</p>
+      <div class="callout">
+        <p><strong>Yakında: kullandığınız veritabanıyla.</strong> Bugün kurulum sihirbazı gömülü veritabanıyla hazır geliyor — kurulum gerektirmez. Çok yakında Calio, şirketinizde zaten kullandığınız PostgreSQL, MySQL, MariaDB, SQLite, MongoDB, Microsoft SQL Server veya Oracle veritabanıyla da çalışacak.</p>
       </div>
 
-      <h2>Notion hâlâ kimin için doğru</h2>
-      <p>Dürüst olalım: saf doküman, wiki, bilgi tabanı ya da Notion'ın esnek veritabanı yapısına gerçekten ihtiyaç duyan bir kullanım senaryonuz varsa Notion'da kalın. Calio bir kanban ve ekip iletişimi aracı — genel amaçlı bir doküman/wiki aracı değil. Notion'ı yalnızca görev/proje takibi için "zorlayarak" kullanıyorsanız ve WIP limiti, otomatik bildirim, denetim kaydı gibi ihtiyaçlar eksik hissettiriyorsa bu sayfa sizin için.</p>
+      <h2>Güvenliğinizden siz sorumlusunuz</h2>
+      <p>Uygulama da veritabanı da kendi sunucunuzda çalıştığı için o sunucunun ve giriş bilgilerinin güvenliği size kalır. Calio güçlü korumalarla gelir; ama şifrenizi kimseyle paylaşmamak, sunucunuza yetkisiz erişimi engellemek ve düzenli yedek almak sizin elinizde.</p>
+      <ul>
+        <li>Girişiniz güvenle doğrulanır; oturumlar kısa aralıklarla kendiliğinden yenilenir, uzun süre açık unutulmaz</li>
+        <li>Parolalarınız hiçbir yerde okunabilir biçimde tutulmaz — bir sızıntı olsa bile kimse şifrenizi göremez</li>
+        <li>Kimin neyi görüp yönetebileceğini siz belirlersiniz — havuz ve proje düzeyinde ayrı yetkiler</li>
+        <li>Değiştirilemez denetim kaydı — IP ve zaman damgasıyla</li>
+        <li>Veritabanı sizde — dilediğiniz an yedekleyin, dilediğiniz an dışa aktarın</li>
+      </ul>
 
-      <h2>Sık gelen üç itiraz</h2>
-
-      <h3>"Zaten her şeyi Notion'da tutuyoruz."</h3>
-      <p>Anlaşılır — dokümantasyon, toplantı notları ve wiki içeriğinizi Notion'da tutmaya devam edebilirsiniz. Yalnızca aktif görev/proje takibini Calio'ya taşıyıp iki aracı birlikte kullanan ekipler var.</p>
-
-      <h3>"Notion'ın esnekliğini kaybederim."</h3>
-      <p>Doğru — Calio, Notion'ın özel veritabanı/formül/görünüm esnekliğini sunmuyor. Kanban, sohbet, görüntülü arama, takvim ve denetim kaydına odaklanıyor. Esneklik sizin için birincil öncelikse Notion'da kalmak daha doğru olabilir.</p>
-
-      <h3>"Ekibim Notion'a alışkın."</h3>
-      <p>Calio bilinen kanban düzenini kullanıyor: liste, kart, sürükle-bırak. Notion'ın board görünümünü kullanabilen biri birkaç dakikada Calio'ya geçiyor. Deneyin: <a href="https://demo.calio.space" target="_blank" rel="noopener">demo.calio.space</a></p>
+      <h2>KVKK ve yurt dışına veri aktarımı</h2>
+      <p>KVKK'da yurt dışına veri aktarımı her yıl daha sıkı denetleniyor. Calio'da bu risk gündeminize hiç girmez: veriniz şirketinizin sunucusundan dışarı çıkmadığı için aktarım izni, ek sözleşme ve "acaba" kalmaz. Bu sayfayı hukuk ve IT ekibinize gönderebilirsiniz. Ayrıntı: <a href="/kvkk-uyumlu-proje-yonetimi">KVKK uyumlu proje yönetimi</a>.</p>
 
       <h2>Sıradaki adım</h2>
-      <p>Notion veritabanınızı 30 dakikalık bir demoda <strong>canlı aktaralım.</strong> Satış baskısı yok; kendi kullanım senaryonuz üzerinden ilerliyoruz.</p>
+      <p>Kurulumu ve güvenlik modelini 30 dakikalık bir demoda birlikte inceleyelim. Satış baskısı yok.</p>
       <p><strong>Lansman kampanyası:</strong> demo talep eden ilk 5 şirket Calio'yu 6 ay boyunca ücretsiz kullanıyor.</p>
 
       <div class="landing-cta">
@@ -255,10 +177,10 @@
     <section class="related-pages" aria-label="İlgili sayfalar">
       <h2>İlgili sayfalar</h2>
       <div class="related-grid">
-        <a class="related-card" href="/jira-alternatifi">Jira Alternatifi<span>Kendi sunucunuzda Türkçe Kanban</span></a>
+        <a class="related-card" href="/kvkk-uyumlu-proje-yonetimi">KVKK Uyumlu Proje Yönetimi<span>Veriyi hiç yurt dışına çıkarmadan</span></a>
         <a class="related-card" href="/self-hosted-proje-yonetimi">Self-Hosted Proje Yönetimi<span>Kendi sunucunuza kurun</span></a>
-        <a class="related-card" href="/en-iyi-kanban-araclari">En İyi Kanban Araçları<span>2026 karşılaştırması</span></a>
-        <a class="related-card" href="/sorular">Sorular ve Cevaplar<span>Self-hosted, KVKK, Kanban SSS</span></a>
+        <a class="related-card" href="/ozellikler">Özellikler<span>Kanban, sohbet, arama, takvim</span></a>
+        <a class="related-card" href="/fiyatlandirma">Fiyatlandırma<span>TL bazında, kişi başı değil</span></a>
       </div>
     </section>
   </main>

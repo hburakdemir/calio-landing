@@ -17,7 +17,11 @@ export default defineConfig({
         azureDevopsAlternatifi: fileURLToPath(new URL('./sayfalar/azure-devops-alternatifi.html', import.meta.url)),
         notionAlternatifi: fileURLToPath(new URL('./sayfalar/notion-alternatifi.html', import.meta.url)),
         asanaKarsilastirma: fileURLToPath(new URL('./sayfalar/asana-karsilastirma.html', import.meta.url)),
-        enIyiKanbanAraclari: fileURLToPath(new URL('./sayfalar/en-iyi-kanban-araclari.html', import.meta.url))
+        enIyiKanbanAraclari: fileURLToPath(new URL('./sayfalar/en-iyi-kanban-araclari.html', import.meta.url)),
+        ozellikler: fileURLToPath(new URL('./sayfalar/ozellikler.html', import.meta.url)),
+        tasima: fileURLToPath(new URL('./sayfalar/tasima.html', import.meta.url)),
+        guvenlik: fileURLToPath(new URL('./sayfalar/guvenlik.html', import.meta.url)),
+        fiyatlandirma: fileURLToPath(new URL('./sayfalar/fiyatlandirma.html', import.meta.url))
       },
       output: {
         manualChunks(id) {

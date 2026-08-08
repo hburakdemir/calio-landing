@@ -203,14 +203,19 @@ const landingPages = [
   'azure-devops-alternatifi.html',
   'notion-alternatifi.html',
   'asana-karsilastirma.html',
-  'en-iyi-kanban-araclari.html'
+  'en-iyi-kanban-araclari.html',
+  'ozellikler.html',
+  'tasima.html',
+  'guvenlik.html',
+  'fiyatlandirma.html'
 ];
 for (const file of landingPages) {
   const p = path.join(dist, file);
   if (existsSync(p)) {
+    const cleanPath = file.replace(/\.html$/, '');
     const html = readFileSync(p, 'utf8').replace(
       '</head>',
-      `\n    <link rel="canonical" href="${SITE_URL}/${file}" />\n  </head>`
+      `\n    <link rel="canonical" href="${SITE_URL}/${cleanPath}" />\n  </head>`
     );
     writeFileSync(p, html);
   }
@@ -223,15 +228,19 @@ const today = new Date().toISOString().slice(0, 10);
 const urls = [
   '/',
   '/en/',
-  '/jira-alternatifi.html',
-  '/kvkk-uyumlu-proje-yonetimi.html',
-  '/self-hosted-proje-yonetimi.html',
-  '/sorular.html',
-  '/trello-alternatifi.html',
-  '/azure-devops-alternatifi.html',
-  '/notion-alternatifi.html',
-  '/asana-karsilastirma.html',
-  '/en-iyi-kanban-araclari.html'
+  '/jira-alternatifi',
+  '/kvkk-uyumlu-proje-yonetimi',
+  '/self-hosted-proje-yonetimi',
+  '/sorular',
+  '/trello-alternatifi',
+  '/azure-devops-alternatifi',
+  '/notion-alternatifi',
+  '/asana-karsilastirma',
+  '/en-iyi-kanban-araclari',
+  '/ozellikler',
+  '/tasima',
+  '/guvenlik',
+  '/fiyatlandirma'
 ];
 writeFileSync(
   path.join(dist, 'sitemap.xml'),

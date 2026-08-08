@@ -373,39 +373,6 @@ function migrationSection() {
     scrollTrigger: { trigger: '.migration-flow', start: 'top 80%', once: true }
   });
 
-  // Checklist: items fade up while their check marks draw in one by one.
-  const checkPaths = gsap.utils.toArray('.migration-checklist .check-icon path');
-  checkPaths.forEach((p) => {
-    const l = p.getTotalLength();
-    gsap.set(p, { strokeDasharray: l, strokeDashoffset: l });
-  });
-  ScrollTrigger.create({
-    trigger: '.migration-checklist',
-    start: 'top 75%',
-    once: true,
-    onEnter() {
-      gsap.to(checkPaths, { strokeDashoffset: 0, duration: 0.45, ease: 'power2.out', stagger: 0.1 });
-      gsap.from('.migration-checklist .check-item', {
-        y: 14,
-        opacity: 0,
-        duration: 0.5,
-        ease: 'power2.out',
-        stagger: 0.1
-      });
-    }
-  });
-  fadeUp('.migration-checklist h3', '.migration-checklist');
-
-  // Honest note arrives last — intentionally calm.
-  gsap.from('.honest-note', {
-    opacity: 0,
-    y: 20,
-    duration: 0.8,
-    delay: 0.5,
-    ease: 'power2.out',
-    scrollTrigger: { trigger: '.migration-cols', start: 'top 75%', once: true }
-  });
-
   fadeUp('.migration-cta-row', '.migration-cta-row', {}, { start: 'top 90%' });
 }
 
@@ -495,28 +462,7 @@ function securitySection() {
     }
   });
 
-  // Step cards slide in from the left; numbers flip in.
-  gsap.from('.step-card', {
-    x: -40,
-    opacity: 0,
-    duration: 0.7,
-    ease: 'power2.out',
-    stagger: 0.15,
-    scrollTrigger: { trigger: '.steps-row', start: 'top 75%', once: true }
-  });
-  gsap.from('.step-num', {
-    rotationX: 90,
-    opacity: 0,
-    transformOrigin: '50% 100%',
-    duration: 0.6,
-    ease: 'power2.out',
-    stagger: 0.15,
-    delay: 0.2,
-    scrollTrigger: { trigger: '.steps-row', start: 'top 75%', once: true }
-  });
-
-  fadeUp('.spec-card', '.security-cols');
-  fadeUp('.security-shot', '.security-cols', {}, { start: 'top 70%' });
+  fadeUp('.security-shot', section, {}, { start: 'top 70%' });
   fadeUp('.kvkk-note', '.kvkk-note', {}, { start: 'top 88%' });
 }
 

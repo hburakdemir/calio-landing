@@ -55,7 +55,10 @@ export function initNav(reducedMotion) {
   // ScrollTrigger positions so pinned-section spacers can never skew it.
   const links = Array.from(nav.querySelectorAll('.nav-links a'));
   const pairs = links
-    .map((link) => [link, document.querySelector(link.getAttribute('href'))])
+    .map((link) => {
+      const href = link.getAttribute('href');
+      return [link, href && href.startsWith('#') ? document.querySelector(href) : null];
+    })
     .filter(([, section]) => section);
   let rafPending = false;
   const updateActive = () => {

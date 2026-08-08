@@ -8,33 +8,33 @@
    ============================================================ */
 
 /* Wider content column than the plain legal doc (kvkk.html) — these
-   pages carry comparison tables that need the extra room. */
+   pages carry comparison tables that need the extra room. Extra
+   top padding clears the fixed product nav (.nav, 64px) these pages
+   now share with the homepage. */
 .landing-page {
   max-width: 880px;
 }
+/* Higher specificity than legal.css's `.legal-page { padding: ... }`
+   shorthand — Vite splits legal.css and landing.css into separate chunks
+   and doesn't guarantee landing.css's <link> comes last, so a plain
+   `.landing-page { padding-top }` longhand can lose to that shorthand
+   regardless of source order. Both classes together avoid depending on
+   chunk order. */
+.legal-page.landing-page {
+  padding-top: calc(64px + var(--space-7));
+}
+@media (max-width: 767px) {
+  .legal-page.landing-page { padding-top: calc(64px + var(--space-6)); }
+}
 
-/* ============ Header: brand + back-link + CTAs ============ */
-.landing-head {
-  flex-wrap: wrap;
-  row-gap: var(--space-3);
-}
-.landing-head-actions {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  flex-wrap: wrap;
-}
-.landing-head-actions .legal-back {
-  margin-right: var(--space-1);
-}
-.landing-head-actions .btn {
-  padding: 9px 16px;
+/* ============ Breadcrumb above H1 ============ */
+.landing-breadcrumb {
   font-size: var(--fs-micro);
+  color: var(--text-3);
+  margin-bottom: var(--space-3);
 }
-@media (max-width: 560px) {
-  .landing-head { flex-direction: column; align-items: flex-start; }
-  .landing-head-actions { width: 100%; }
-}
+.landing-breadcrumb a { color: var(--text-3); text-decoration: none; }
+.landing-breadcrumb a:hover { color: var(--teal-400); }
 
 /* ============ Dated byline under H1 ============ */
 .landing-doc .legal-updated {

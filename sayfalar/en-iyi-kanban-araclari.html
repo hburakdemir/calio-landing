@@ -16,7 +16,7 @@
   <meta property="og:title" content="En İyi Kanban Araçları 2026: Karşılaştırma | Calio" />
   <meta property="og:description" content="Trello, Jira, Asana, ClickUp, monday.com, Bitrix24, Plane, OpenProject ve yerli araçlar dahil öne çıkan kanban araçlarının 2026 karşılaştırması, kaynaklı." />
   <meta property="og:image" content="https://calio.space/og.jpg" />
-  <meta property="og:url" content="https://calio.space/en-iyi-kanban-araclari.html" />
+  <meta property="og:url" content="https://calio.space/en-iyi-kanban-araclari" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <script type="module" src="/src/landing.js"></script>
   <script type="application/ld+json">
@@ -25,28 +25,105 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://calio.space/" },
-      { "@type": "ListItem", "position": 2, "name": "En İyi Kanban Araçları", "item": "https://calio.space/en-iyi-kanban-araclari.html" }
+      { "@type": "ListItem", "position": 2, "name": "En İyi Kanban Araçları", "item": "https://calio.space/en-iyi-kanban-araclari" }
     ]
   }
   </script>
 </head>
 <body class="legal-body landing-body">
-  <main class="legal-page landing-page">
-    <header class="legal-head landing-head">
+  <div class="bg-layer" aria-hidden="true">
+    <div class="bg-glow bg-glow-teal"></div>
+    <div class="bg-glow bg-glow-indigo"></div>
+  </div>
+
+  <header class="nav" id="site-nav">
+    <div class="container nav-inner">
       <a href="/" class="nav-brand" aria-label="Calio ana sayfa">
-        <svg viewBox="0 0 34 34" width="28" height="28" role="img" aria-label="Calio">
+        <svg viewBox="0 0 34 34" width="30" height="30" role="img" aria-label="Calio">
           <rect width="34" height="34" rx="8" fill="#0F766E"/>
           <path d="M24 11A10 10 0 1 0 24 23" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
           <path d="M24 23l5 5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
         </svg>
         <span class="nav-wordmark">Calio</span>
       </a>
-      <div class="landing-head-actions">
-        <a class="legal-back" href="/">← Siteye dön</a>
+
+      <nav class="nav-links" aria-label="Ana menü">
+        <a href="/ozellikler">Özellikler</a>
+        <a href="/tasima">Taşıma</a>
+        <a href="/guvenlik">Güvenlik</a>
+        <a href="/fiyatlandirma">Fiyatlandırma</a>
+        <a href="/sorular">SSS</a>
+      </nav>
+
+      <div class="nav-right">
+        <details class="nav-resources">
+          <summary class="nav-resources-toggle">Kaynaklar</summary>
+          <div class="nav-resources-panel">
+            <a href="/jira-alternatifi">Jira Alternatifi</a>
+            <a href="/trello-alternatifi">Trello Alternatifi</a>
+            <a href="/azure-devops-alternatifi">Azure DevOps / TFS Alternatifi</a>
+            <a href="/notion-alternatifi">Notion Alternatifi</a>
+            <a href="/asana-karsilastirma">Calio ve Asana Karşılaştırması</a>
+            <a href="/en-iyi-kanban-araclari">En İyi Kanban Araçları</a>
+            <a href="/kvkk-uyumlu-proje-yonetimi">KVKK Uyumlu Proje Yönetimi</a>
+            <a href="/self-hosted-proje-yonetimi">Self-Hosted Proje Yönetimi</a>
+            <a href="/sorular">Sorular ve Cevaplar</a>
+          </div>
+        </details>
+        <button type="button" class="theme-toggle" aria-pressed="false" aria-label="Açık temaya geç">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5"/>
+            <path d="M12 2.5v2.5M12 19v2.5M4.22 4.22l1.77 1.77M18.01 18.01l1.77 1.77M2.5 12H5M19 12h2.5M4.22 19.78l1.77-1.77M18.01 5.99l1.77-1.77"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>
+          </svg>
+        </button>
+        <a href="https://demo.calio.space" class="btn btn-ghost nav-try" target="_blank" rel="noopener">Demoyu Dene</a>
+        <a href="/#demo" class="btn btn-primary btn-magnetic nav-cta">Demo Talep Et</a>
+        <button type="button" class="nav-burger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <nav class="mobile-menu-links" aria-label="Mobil menü">
+        <a href="/ozellikler">Özellikler</a>
+        <a href="/tasima">Taşıma</a>
+        <a href="/guvenlik">Güvenlik</a>
+        <a href="/fiyatlandirma">Fiyatlandırma</a>
+        <a href="/sorular">SSS</a>
+        <span class="mobile-menu-divider" aria-hidden="true"></span>
+        <a class="is-sub" href="/jira-alternatifi">Jira Alternatifi</a>
+        <a class="is-sub" href="/trello-alternatifi">Trello Alternatifi</a>
+        <a class="is-sub" href="/azure-devops-alternatifi">Azure DevOps / TFS Alternatifi</a>
+        <a class="is-sub" href="/notion-alternatifi">Notion Alternatifi</a>
+        <a class="is-sub" href="/asana-karsilastirma">Calio ve Asana Karşılaştırması</a>
+        <a class="is-sub" href="/en-iyi-kanban-araclari">En İyi Kanban Araçları</a>
+        <a class="is-sub" href="/kvkk-uyumlu-proje-yonetimi">KVKK Uyumlu Proje Yönetimi</a>
+        <a class="is-sub" href="/self-hosted-proje-yonetimi">Self-Hosted Proje Yönetimi</a>
+        <a class="is-sub" href="/sorular">Sorular ve Cevaplar</a>
         <a href="https://demo.calio.space" class="btn btn-ghost" target="_blank" rel="noopener">Demoyu Dene</a>
         <a href="/#demo" class="btn btn-primary">Demo Talep Et</a>
+      </nav>
+      <div class="mobile-menu-controls">
+        <button type="button" class="theme-toggle" aria-pressed="false" aria-label="Açık temaya geç">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5"/>
+            <path d="M12 2.5v2.5M12 19v2.5M4.22 4.22l1.77 1.77M18.01 18.01l1.77 1.77M2.5 12H5M19 12h2.5M4.22 19.78l1.77-1.77M18.01 5.99l1.77-1.77"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>
+          </svg>
+        </button>
       </div>
-    </header>
+    </div>
+  </header>
+
+  <main class="legal-page landing-page">
+    <p class="landing-breadcrumb"><a href="/">Ana Sayfa</a> / En İyi Kanban Araçları</p>
 
     <article class="legal-doc landing-doc">
       <h1>2026'da En İyi Kanban Araçları: Karşılaştırma</h1>
@@ -185,13 +262,13 @@
       <h2>Araçların kısa profilleri</h2>
 
       <h3>Trello</h3>
-      <p>En basit sürükle-bırak kanban deneyimlerinden biri; ücretsiz plan küçük ekipler için yeterli ama workspace başına 10 işbirlikçiyle sınırlı. Self-hosted seçeneği yok, dahili sohbet/görüntülü arama sunmuyor. Ayrıntı: <a href="/trello-alternatifi.html">Trello alternatifi</a>.</p>
+      <p>En basit sürükle-bırak kanban deneyimlerinden biri; ücretsiz plan küçük ekipler için yeterli ama workspace başına 10 işbirlikçiyle sınırlı. Self-hosted seçeneği yok, dahili sohbet/görüntülü arama sunmuyor. Ayrıntı: <a href="/trello-alternatifi">Trello alternatifi</a>.</p>
 
       <h3>Jira</h3>
-      <p>Büyük yazılım ekipleri için tasarlanmış, sprint/backlog/agile raporlama açısından en olgun araçlardan biri. Türkçe resmi dil değil, self-hosted seçeneği yalnızca büyük kullanıcı katmanları için (Data Center). Ayrıntı: <a href="/jira-alternatifi.html">Jira alternatifi</a>.</p>
+      <p>Büyük yazılım ekipleri için tasarlanmış, sprint/backlog/agile raporlama açısından en olgun araçlardan biri. Türkçe resmi dil değil, self-hosted seçeneği yalnızca büyük kullanıcı katmanları için (Data Center). Ayrıntı: <a href="/jira-alternatifi">Jira alternatifi</a>.</p>
 
       <h3>Asana</h3>
-      <p>Görev/proje yönetiminde olgun bir otomasyon (Rules) ve geniş entegrasyon kataloğu sunuyor. Self-hosted seçeneği yok, Türkçe arayüz yok. Ayrıntı: <a href="/asana-karsilastirma.html">Calio ve Asana karşılaştırması</a>.</p>
+      <p>Görev/proje yönetiminde olgun bir otomasyon (Rules) ve geniş entegrasyon kataloğu sunuyor. Self-hosted seçeneği yok, Türkçe arayüz yok. Ayrıntı: <a href="/asana-karsilastirma">Calio ve Asana karşılaştırması</a>.</p>
 
       <h3>ClickUp</h3>
       <p>Geniş özellik yelpazesi ve ücretsiz plana sahip, hızlı büyüyen bir araç. Self-hosted seçeneği yok; Türkçe arayüz için açık kullanıcı talebi var ama resmi destek yok.</p>
@@ -226,18 +303,59 @@
     <section class="related-pages" aria-label="İlgili sayfalar">
       <h2>İlgili sayfalar</h2>
       <div class="related-grid">
-        <a class="related-card" href="/jira-alternatifi.html">Jira Alternatifi<span>Kendi sunucunuzda Türkçe Kanban</span></a>
-        <a class="related-card" href="/trello-alternatifi.html">Trello Alternatifi<span>Panolarınızı tek tıkla taşıyın</span></a>
-        <a class="related-card" href="/azure-devops-alternatifi.html">Azure DevOps / TFS Alternatifi<span>Basit, Türkçe, kendi sunucunuzda</span></a>
-        <a class="related-card" href="/notion-alternatifi.html">Notion Alternatifi<span>Proje yönetimi için amaca özel</span></a>
-        <a class="related-card" href="/asana-karsilastirma.html">Calio ve Asana Karşılaştırması<span>Hangisi size uygun</span></a>
-        <a class="related-card" href="/self-hosted-proje-yonetimi.html">Self-Hosted Proje Yönetimi<span>Kendi sunucunuza kurun</span></a>
+        <a class="related-card" href="/jira-alternatifi">Jira Alternatifi<span>Kendi sunucunuzda Türkçe Kanban</span></a>
+        <a class="related-card" href="/trello-alternatifi">Trello Alternatifi<span>Panolarınızı tek tıkla taşıyın</span></a>
+        <a class="related-card" href="/azure-devops-alternatifi">Azure DevOps / TFS Alternatifi<span>Basit, Türkçe, kendi sunucunuzda</span></a>
+        <a class="related-card" href="/notion-alternatifi">Notion Alternatifi<span>Proje yönetimi için amaca özel</span></a>
+        <a class="related-card" href="/asana-karsilastirma">Calio ve Asana Karşılaştırması<span>Hangisi size uygun</span></a>
+        <a class="related-card" href="/self-hosted-proje-yonetimi">Self-Hosted Proje Yönetimi<span>Kendi sunucunuza kurun</span></a>
       </div>
     </section>
-
-    <footer class="legal-foot">
-      <p>© 2026 Calio — <a href="/">ana sayfaya dön</a></p>
-    </footer>
   </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-brand" aria-label="Calio">
+          <svg viewBox="0 0 34 34" width="28" height="28" role="img" aria-label="Calio">
+            <rect width="34" height="34" rx="8" fill="#0F766E"/>
+            <path d="M24 11A10 10 0 1 0 24 23" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M24 23l5 5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span class="nav-wordmark">Calio</span>
+        </a>
+        <p class="footer-tagline">Kendi sunucunuzda proje yönetimi.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Alt menü">
+        <p class="footer-col-title">Bağlantılar</p>
+        <a href="/ozellikler">Özellikler</a>
+        <a href="/tasima">Taşıma</a>
+        <a href="/guvenlik">Güvenlik</a>
+        <a href="/fiyatlandirma">Fiyatlandırma</a>
+        <a href="/sorular">SSS</a>
+        <a href="/#demo">Demo Talep Et</a>
+        <a href="/jira-alternatifi">Jira Alternatifi</a>
+        <a href="/trello-alternatifi">Trello Alternatifi</a>
+        <a href="/azure-devops-alternatifi">Azure DevOps / TFS Alternatifi</a>
+        <a href="/notion-alternatifi">Notion Alternatifi</a>
+        <a href="/asana-karsilastirma">Calio ve Asana Karşılaştırması</a>
+        <a href="/en-iyi-kanban-araclari">En İyi Kanban Araçları</a>
+        <a href="/kvkk-uyumlu-proje-yonetimi">KVKK Uyumlu Proje Yönetimi</a>
+        <a href="/self-hosted-proje-yonetimi">Self-Hosted Proje Yönetimi</a>
+        <a href="/sorular">Sorular ve Cevaplar</a>
+      </nav>
+
+      <div class="footer-contact">
+        <p class="footer-col-title">İletişim</p>
+        <a class="footer-mail" href="mailto:burakd279@gmail.com">burakd279@gmail.com</a>
+        <a class="footer-mail" href="https://www.linkedin.com/company/caliospace" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p class="footer-kvkk">Bu sitedeki demo formu verilerinizi sunucumuzda saklamaz; talebiniz bize e-posta olarak iletilir. <a href="/kvkk.html">KVKK Aydınlatma Metni</a></p>
+      <p class="footer-copy">© 2026 Calio — Türkiye'de geliştirildi.</p>
+    </div>
+  </footer>
 </body>
 </html>
