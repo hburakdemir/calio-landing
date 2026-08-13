@@ -1,0 +1,33 @@
+# Calio
+
+> Self-hosted proje yönetimi: Kanban board, ekip sohbeti, sesli/görüntülü görüşme ve takvim tek uygulamada. Kendi sunucunuzda çalışır; Jira, Trello, Azure DevOps ve Notion'dan tek tıkla veri aktarımı sunar.
+
+## Ürün
+
+- [Ana Sayfa](https://calio.space/): Calio'ya genel bakış
+- [Özellikler](https://calio.space/ozellikler): Kanban board, sohbet, görüntülü arama, takvim, rol tabanlı erişim kontrolü
+- [Fiyatlandırma](https://calio.space/fiyatlandirma): Ücretsiz ve ücretli katmanlar
+- [Güvenlik](https://calio.space/guvenlik): Self-hosted veri güvenliği yaklaşımı
+- [Veri Taşıma](https://calio.space/tasima): Jira, Trello, Azure DevOps ve Notion'dan aktarım
+
+## Karşılaştırmalar
+
+- [Jira Alternatifi](https://calio.space/jira-alternatifi)
+- [Trello Alternatifi](https://calio.space/trello-alternatifi)
+- [Notion Alternatifi](https://calio.space/notion-alternatifi)
+- [Azure DevOps Alternatifi](https://calio.space/azure-devops-alternatifi)
+- [Asana Karşılaştırması](https://calio.space/asana-karsilastirma)
+- [En İyi Kanban Araçları](https://calio.space/en-iyi-kanban-araclari)
+
+## Uyumluluk
+
+- [KVKK Uyumlu Proje Yönetimi](https://calio.space/kvkk-uyumlu-proje-yonetimi)
+- [Self-Hosted Proje Yönetimi](https://calio.space/self-hosted-proje-yonetimi)
+
+## Sıkça Sorulan Sorular
+
+- [SSS](https://calio.space/sorular): Self-hosted, KVKK ve Kanban hakkında sorular ve cevaplar
+
+## English
+
+- [English Homepage](https://calio.space/en/)
