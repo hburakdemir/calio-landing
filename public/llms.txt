@@ -1,33 +1,62 @@
 # Calio
 
-> Self-hosted proje yönetimi: Kanban board, ekip sohbeti, sesli/görüntülü görüşme ve takvim tek uygulamada. Kendi sunucunuzda çalışır; Jira, Trello, Azure DevOps ve Notion'dan tek tıkla veri aktarımı sunar.
+> Calio, şirketlerin kendi sunucusunda çalışan bir proje yönetim platformudur. Kanban panoları, ekip sohbeti, sesli/görüntülü arama, takvim, hatırlatıcılar, değiştirilemez denetim kaydı ve rol tabanlı yetkilendirmeyi tek uygulamada toplar. Jira, Trello, Azure DevOps ve Notion'dan içe aktarım destekler. Arayüzü Türkçe ve İngilizcedir; Türkiye'de geliştirilmektedir.
 
-## Ürün
+## Self-hosted proje yönetimi nedir?
 
-- [Ana Sayfa](https://calio.space/): Calio'ya genel bakış
-- [Özellikler](https://calio.space/ozellikler): Kanban board, sohbet, görüntülü arama, takvim, rol tabanlı erişim kontrolü
-- [Fiyatlandırma](https://calio.space/fiyatlandirma): Ücretsiz ve ücretli katmanlar
-- [Güvenlik](https://calio.space/guvenlik): Self-hosted veri güvenliği yaklaşımı
-- [Veri Taşıma](https://calio.space/tasima): Jira, Trello, Azure DevOps ve Notion'dan aktarım
+Self-hosted proje yönetimi, yazılımın ve veritabanının bir sağlayıcının bulutunda değil, şirketin kendi sunucusunda çalıştırılmasıdır. Görev kartları, dosyalar ve kullanıcı hesapları o sunucuda kalır; erişim yönetimi, yedekleme ve güncelleme sorumluluğu şirkete geçer. Calio bu modelde çalışır: Windows bilgisayara veya sunucuya tek kurulum sihirbazıyla kurulur, Docker veya DevOps bilgisi gerekmez.
 
-## Karşılaştırmalar
+## Ne içerir
 
+- **Kanban panoları** — sürükle-bırak kartlar, öncelik, etiket, son tarih, çoklu atama, alt görevler, tekrarlayan görevler
+- **Ekip sohbeti** — proje kanalları, grup sohbetleri, birebir mesajlaşma
+- **Sesli/görüntülü arama** — WebRTC ile uygulama içinden, harici bir toplantı aracı gerekmez
+- **Takvim ve hatırlatıcılar** — etkinlikler ve son tarihler tek takvimde, görev son tarihleri otomatik yansır
+- **Değiştirilemez denetim kaydı** — kim neyi ne zaman değiştirdi, IP ve zaman damgasıyla, silinemez
+- **Roller ve yetkiler** — havuz ve proje bazında Owner/Admin/Member/Viewer, herkes yalnızca görmesi gerekeni görür
+- Webhook'lar ve API anahtarları, açık/koyu tema, çöp kutusu ve geri yükleme, Google ile giriş
+- Windows ve macOS masaüstü uygulaması
+
+## Veri aktarımı
+
+Jira, Trello, Azure DevOps ve Notion'dan içe aktarımı destekler: listeler, kartlar, başlık/açıklama, son tarihler, öncelikler, durumlar ve renkleriyle etiketler taşınır. Bu sürümde yorumlar, ek dosyalar ve kişi atamaları aktarılmaz; tek içe aktarımda 500 kayda kadar taşınır.
+
+## Açık kaynak mı?
+
+Hayır. Calio kapalı kaynaklı ticari bir üründür, kaynak kodu kamuya açık değildir. Buna karşılık yazılım müşterinin kendi sunucusunda çalışır ve veritabanı müşteride kalır — veriler her zaman dışa aktarılabilir, sağlayıcıya bağımlılık riski bulut aboneliklerine göre düşüktür.
+
+## Fiyatlandırma
+
+Fiyat henüz TL bazında kamuya açıklanmadı (kişi başı dolar aboneliği modeli hedeflenmiyor). Lansman kampanyası: demo talep eden ilk 5 şirket Calio'yu 6 ay boyunca ücretsiz kullanıyor.
+
+## Barındırma ve güvenlik
+
+Uygulama ve veritabanı kendi sunucunuzda çalışır; localhost'ta, şirket ağında bir IP'de veya kendi alan adınızda yayınlanabilir, zorunlu alan adı yok. Bugün kurulum sihirbazı gömülü veritabanıyla gelir; yakında şirketlerin zaten kullandığı PostgreSQL, MySQL, MariaDB, SQLite, MongoDB, Microsoft SQL Server veya Oracle veritabanıyla da çalışacak. Veri hiç dışarı çıkmadığı için KVKK'nın yurt dışına veri aktarımı rejimi (standart sözleşme, açık rıza sınırları vb.) devreye girmez.
+
+## Sayfalar
+
+### Ürün
+- [Ana Sayfa](https://calio.space/)
+- [Özellikler](https://calio.space/ozellikler): tüm özellik listesi
+- [Fiyatlandırma](https://calio.space/fiyatlandirma): fiyat durumu ve lansman kampanyası
+- [Güvenlik ve Barındırma](https://calio.space/guvenlik): kurulum modelleri, KVKK ve veri güvenliği
+- [Veri Taşıma](https://calio.space/tasima): Jira/Trello/Azure DevOps/Notion'dan aktarım detayları
+- [Canlı Demo](https://demo.calio.space): giriş yapmadan deneme
+
+### Karşılaştırmalar
 - [Jira Alternatifi](https://calio.space/jira-alternatifi)
 - [Trello Alternatifi](https://calio.space/trello-alternatifi)
 - [Notion Alternatifi](https://calio.space/notion-alternatifi)
-- [Azure DevOps Alternatifi](https://calio.space/azure-devops-alternatifi)
+- [Azure DevOps / TFS Alternatifi](https://calio.space/azure-devops-alternatifi)
 - [Asana Karşılaştırması](https://calio.space/asana-karsilastirma)
-- [En İyi Kanban Araçları](https://calio.space/en-iyi-kanban-araclari)
+- [En İyi Kanban Araçları (2026)](https://calio.space/en-iyi-kanban-araclari)
 
-## Uyumluluk
-
-- [KVKK Uyumlu Proje Yönetimi](https://calio.space/kvkk-uyumlu-proje-yonetimi)
+### Uyumluluk
+- [KVKK Uyumlu Proje Yönetimi](https://calio.space/kvkk-uyumlu-proje-yonetimi): yurt dışına veri aktarımı kuralları
 - [Self-Hosted Proje Yönetimi](https://calio.space/self-hosted-proje-yonetimi)
 
-## Sıkça Sorulan Sorular
+### Sıkça Sorulan Sorular
+- [Tüm SSS](https://calio.space/sorular): self-hosted, KVKK ve kanban terimleri üzerine kaynaklı soru-cevap
 
-- [SSS](https://calio.space/sorular): Self-hosted, KVKK ve Kanban hakkında sorular ve cevaplar
-
-## English
-
+### English
 - [English Homepage](https://calio.space/en/)
